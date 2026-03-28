@@ -1,0 +1,60 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.body {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+/* First sentence highlight */
+.body::first-line {
+  color: var(--text);
+  font-style: italic;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.factDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Desktop ── */
+@media (min-width: 768px) {
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6rem;
+  }
+
+  .body {
+    flex: 1;
+  }
+
+  .facts {
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+  }
+}

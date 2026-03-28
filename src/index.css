@@ -1,0 +1,108 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── Design tokens ── */
+:root {
+  --bg:              #0d0d12;
+  --surface:         #13131a;
+  --surface-hover:   #1a1a24;
+  --border:          #2a2635;
+  --text:            #f0eff5;
+  --text-muted:      #8a8899;
+  --accent:          #7b5ea7;
+  --accent-light:    #a67fd4;
+  --accent-subtle:   rgba(123, 94, 167, 0.12);
+  --accent-rgb:      123, 94, 167;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+
+  --nav-h:       64px;
+  --section-py:  4.5rem;
+  --section-px:  1.25rem;
+  --max-w:       1100px;
+
+  --transition:      200ms ease;
+  --transition-slow: 350ms ease;
+  --radius:          6px;
+  --radius-lg:       12px;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul { list-style: none; }
+
+img, svg { display: block; max-width: 100%; }
+
+/* ── Scroll margin for fixed nav ── */
+section {
+  scroll-margin-top: var(--nav-h);
+  padding-block: var(--section-py);
+}
+
+/* ── Reusable utilities ── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+}
+
+.section-num {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 3rem;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Selection ── */
+::selection { background: var(--accent); color: var(--text); }
+
+/* ── Tablet / Desktop ── */
+@media (min-width: 768px) {
+  :root {
+    --section-py: 7rem;
+    --section-px: 2.5rem;
+  }
+}

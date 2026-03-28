@@ -1,0 +1,22 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--accent-rgb), 0.55) 0%,
+    rgba(var(--accent-rgb), 0.2) 45%,
+    transparent 70%
+  );
+  transform: translate(-200px, -200px);
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.15s ease;
+  will-change: transform;
+  /* offset so center aligns with mouse point */
+  margin-left: -50px;
+  margin-top: -50px;
+}

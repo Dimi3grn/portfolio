@@ -1,0 +1,19 @@
+.glow {
+  position: fixed;
+  right: -70px;
+  top: 5vh;
+  width: 160px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--accent-rgb), 0.45) 0%,
+    rgba(var(--accent-rgb), 0.18) 45%,
+    transparent 72%
+  );
+  pointer-events: none;
+  z-index: 9997;
+  /* CSS transition smooths the JS top updates */
+  transition: top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: top;
+}

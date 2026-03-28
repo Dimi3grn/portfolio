@@ -1,0 +1,116 @@
+/* ── Section background ── */
+.section {
+  position: relative;
+  background:
+    radial-gradient(ellipse 55% 70% at -8% 55%, rgba(var(--accent-rgb), 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 35% 40% at 108% 30%, rgba(var(--accent-rgb), 0.12) 0%, transparent 60%);
+}
+
+/* ── Tier wrapper ── */
+.tier {
+  margin-bottom: 2.5rem;
+}
+
+.tierLabel {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0.55;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ── Diamond layout (main stack) ── */
+.diamond {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.diamondRow {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Flat layout (secondary stack) ── */
+.flat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+/* ── Item card (shared) ── */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.1rem 0.6rem;
+  width: 84px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text-muted);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.item:hover {
+  background: var(--surface-hover);
+  border-color: rgba(var(--accent-rgb), 0.55);
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.18);
+  transform: translateY(-3px);
+  color: var(--text);
+}
+
+/* ── Smaller variant for secondary ── */
+.itemSm {
+  padding: 0.85rem 0.5rem;
+  width: 80px;
+}
+
+.icon {
+  display: block;
+  transition: filter var(--transition);
+  flex-shrink: 0;
+}
+
+.item:hover .icon {
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: inherit;
+  letter-spacing: 0.03em;
+  text-align: center;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+/* ── Mobile: slightly tighter ── */
+@media (max-width: 480px) {
+  .item {
+    width: 72px;
+    padding: 0.9rem 0.4rem;
+  }
+  .itemSm {
+    width: 68px;
+  }
+  .label {
+    font-size: 0.6rem;
+  }
+}
