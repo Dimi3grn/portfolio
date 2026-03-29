@@ -38,8 +38,10 @@ export default function Experience() {
 
     const onScroll = () => {
       const rect = section.getBoundingClientRect()
-      const raw = (window.innerHeight - rect.top) / (rect.height + window.innerHeight)
-      const progress = Math.max(0, Math.min(1, raw * 1.4))
+      // start when section top reaches 35% from viewport top (clearly in view)
+      const start = window.innerHeight * 0.35
+      const raw = (start - rect.top) / rect.height
+      const progress = Math.max(0, Math.min(1, raw))
       const pct = `${progress * 100}%`
       line.style.height = pct
       dot.style.top = pct
