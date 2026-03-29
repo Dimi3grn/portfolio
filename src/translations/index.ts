@@ -140,9 +140,9 @@ export const t: Record<Lang, TrSchema> = {
           description: 'Interface fullstack pour un restaurant — frontend React/TypeScript avec dashboard administrateur. Authentification avec rôles (Client / Admin), CRUD complet sur les recettes.',
           tags: ['React', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
-          live: 'https://restaurant-orders-website.vercel.app',
+          live: 'https://menu.dimitrigourrin.dev',
           status: null,
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frestaurant-orders-website.vercel.app?w=600&h=340',
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fmenu.dimitrigourrin.dev?w=600&h=340',
         },
         {
           name: 'Site Agence Immobilière',
@@ -244,9 +244,9 @@ export const t: Record<Lang, TrSchema> = {
           description: 'Fullstack restaurant interface — React/TypeScript frontend with admin dashboard. Role-based authentication (Client / Admin), full CRUD on recipes.',
           tags: ['React', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
-          live: 'https://restaurant-orders-website.vercel.app',
+          live: 'https://menu.dimitrigourrin.dev',
           status: null,
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frestaurant-orders-website.vercel.app?w=600&h=340',
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fmenu.dimitrigourrin.dev?w=600&h=340',
         },
         {
           name: 'Real Estate Agency Website',
