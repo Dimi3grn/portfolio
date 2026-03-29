@@ -8,16 +8,49 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0;
   transition: border-color var(--transition), background var(--transition);
 }
 
 .card:hover {
   border-color: var(--accent);
   background: var(--surface-hover);
+}
+
+/* ── Preview thumbnail ── */
+.previewWrap {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.85);
+  display: block;
+  max-width: 100%;
+}
+
+.previewWrap:hover .previewImg {
+  transform: scale(1.03);
+  filter: brightness(1);
+}
+
+/* ── Card body ── */
+.body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .cardTop {

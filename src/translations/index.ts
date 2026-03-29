@@ -15,6 +15,7 @@ export interface ProjectItem {
   github: string | null
   live: string | null
   status: string | null
+  preview: string | null
 }
 
 export interface TrSchema {
@@ -132,6 +133,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: null,
           status: null,
+          preview: null,
         },
         {
           name: 'Application de Gestion de Commandes',
@@ -140,6 +142,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://restaurant-orders-website.vercel.app',
           status: null,
+          preview: 'https://image.thum.io/get/width/600/crop/380/https://restaurant-orders-website.vercel.app',
         },
         {
           name: 'Site Agence Immobilière',
@@ -148,6 +151,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: null,
           status: 'En développement',
+          preview: null,
         },
       ],
     },
@@ -233,6 +237,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: null,
           status: null,
+          preview: null,
         },
         {
           name: 'Order Management App',
@@ -241,6 +246,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://restaurant-orders-website.vercel.app',
           status: null,
+          preview: 'https://image.thum.io/get/width/600/crop/380/https://restaurant-orders-website.vercel.app',
         },
         {
           name: 'Real Estate Agency Website',
@@ -249,6 +255,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: null,
           status: 'In development',
+          preview: null,
         },
       ],
     },
