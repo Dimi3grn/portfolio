@@ -131,9 +131,9 @@ export const t: Record<Lang, TrSchema> = {
           description: 'Application fullstack — forum de partage musical avec système de batailles d\'artistes, profils utilisateurs et interactions sociales. Architecture MVC en Go, authentification JWT, base de données MySQL.',
           tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
           github: 'https://github.com/Dimi3grn/Rythm-it',
-          live: null,
+          live: 'https://rythmit.dimitrigourrin.dev',
           status: null,
-          preview: null,
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frythmit.dimitrigourrin.dev?w=600&h=340',
         },
         {
           name: 'Application de Gestion de Commandes',
@@ -235,9 +235,9 @@ export const t: Record<Lang, TrSchema> = {
           description: 'Fullstack app — music sharing forum with artist battle system, user profiles and social interactions. MVC architecture in Go, JWT authentication, MySQL database.',
           tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
           github: 'https://github.com/Dimi3grn/Rythm-it',
-          live: null,
+          live: 'https://rythmit.dimitrigourrin.dev',
           status: null,
-          preview: null,
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frythmit.dimitrigourrin.dev?w=600&h=340',
         },
         {
           name: 'Order Management App',
