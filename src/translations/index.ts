@@ -142,7 +142,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://restaurant-orders-website.vercel.app',
           status: null,
-          preview: 'https://image.thum.io/get/width/600/crop/380/https://restaurant-orders-website.vercel.app',
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frestaurant-orders-website.vercel.app?w=600&h=340',
         },
         {
           name: 'Site Agence Immobilière',
@@ -246,7 +246,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://restaurant-orders-website.vercel.app',
           status: null,
-          preview: 'https://image.thum.io/get/width/600/crop/380/https://restaurant-orders-website.vercel.app',
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frestaurant-orders-website.vercel.app?w=600&h=340',
         },
         {
           name: 'Real Estate Agency Website',
