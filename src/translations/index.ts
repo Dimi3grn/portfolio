@@ -132,7 +132,7 @@ export const t: Record<Lang, TrSchema> = {
           tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: 'https://rythmit.dimitrigourrin.dev',
-          status: null,
+          status: 'En développement',
           preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frythmit.dimitrigourrin.dev?w=600&h=340',
         },
         {
@@ -236,7 +236,7 @@ export const t: Record<Lang, TrSchema> = {
           tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: 'https://rythmit.dimitrigourrin.dev',
-          status: null,
+          status: 'In development',
           preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frythmit.dimitrigourrin.dev?w=600&h=340',
         },
         {
