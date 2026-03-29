@@ -17,17 +17,29 @@ export default function Cursor() {
       })
     }
 
+    const INTERACTIVE = 'a, button, [role="button"], input, textarea, select, label'
+
     const onLeave = () => { el.style.opacity = '0' }
     const onEnter = () => { el.style.opacity = '1' }
+    const onOver = (e: MouseEvent) => {
+      const target = e.target as Element
+      if (target.closest(INTERACTIVE)) {
+        el.style.opacity = '0'
+      } else {
+        el.style.opacity = '1'
+      }
+    }
 
     document.addEventListener('mousemove', onMove, { passive: true })
     document.addEventListener('mouseleave', onLeave)
     document.addEventListener('mouseenter', onEnter)
+    document.addEventListener('mouseover', onOver, { passive: true })
 
     return () => {
       document.removeEventListener('mousemove', onMove)
       document.removeEventListener('mouseleave', onLeave)
       document.removeEventListener('mouseenter', onEnter)
+      document.removeEventListener('mouseover', onOver)
       cancelAnimationFrame(raf)
     }
   }, [])
