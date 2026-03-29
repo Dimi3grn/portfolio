@@ -138,7 +138,7 @@ export const t: Record<Lang, TrSchema> = {
           description: 'Interface fullstack pour un restaurant — frontend React/TypeScript avec dashboard administrateur. Authentification avec rôles (Client / Admin), CRUD complet sur les recettes.',
           tags: ['React', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
-          live: null,
+          live: 'https://restaurant-orders-website.vercel.app',
           status: null,
         },
         {
@@ -239,7 +239,7 @@ export const t: Record<Lang, TrSchema> = {
           description: 'Fullstack restaurant interface — React/TypeScript frontend with admin dashboard. Role-based authentication (Client / Admin), full CRUD on recipes.',
           tags: ['React', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
-          live: null,
+          live: 'https://restaurant-orders-website.vercel.app',
           status: null,
         },
         {
