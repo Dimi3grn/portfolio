@@ -38,9 +38,8 @@ export default function Experience() {
 
     const onScroll = () => {
       const rect = section.getBoundingClientRect()
-      const progress = Math.max(0, Math.min(1,
-        (window.innerHeight - rect.top) / (rect.height + window.innerHeight)
-      ))
+      const raw = (window.innerHeight - rect.top) / (rect.height + window.innerHeight)
+      const progress = Math.max(0, Math.min(1, raw * 2.2))
       const pct = `${progress * 100}%`
       line.style.height = pct
       dot.style.top = pct
