@@ -1,7 +1,23 @@
-import { useEffect, useRef } from 'react'
+import { Fragment, useEffect, useRef, type ReactNode } from 'react'
 import { useLang } from '../../context/LangContext'
 import { ExperienceItem } from '../../translations'
 import styles from './Experience.module.css'
+
+/** Renders `**bold**` segments as <strong> (optional in any experience description). */
+function DescriptionWithBold({ text }: { text: string }) {
+  const parts: ReactNode[] = []
+  const re = /\*\*(.+?)\*\*/g
+  let last = 0
+  let m: RegExpExecArray | null
+  let k = 0
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index))
+    parts.push(<strong key={k++}>{m[1]}</strong>)
+    last = m.index + m[0].length
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return <p className={styles.desc}>{parts.length ? <Fragment>{parts}</Fragment> : text}</p>
+}
 
 function TimelineItem({ item }: { item: ExperienceItem }) {
   return (
@@ -11,7 +27,7 @@ function TimelineItem({ item }: { item: ExperienceItem }) {
         <span className={styles.period}>{item.period}</span>
         <h3 className={styles.role}>{item.role}</h3>
         <p className={styles.company}>{item.company}</p>
-        <p className={styles.desc}>{item.description}</p>
+        <DescriptionWithBold text={item.description} />
         {item.linkUrl && item.linkLabel && (
           <a
             href={item.linkUrl}

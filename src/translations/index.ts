@@ -118,7 +118,7 @@ export const t: Record<Lang, TrSchema> = {
           company: 'Ynov Campus — concours national (13 campus)',
           period: 'Mars 2026',
           description:
-            'Classement national (tous campus, ~335 participants Bachelor 2) : 7e place. Classement sur le campus d\'Aix-en-Provence : 2e place. Contexte : première édition nationale (13 campus), défis algorithmiques sur une plateforme web gamifiée — filières Informatique, Cybersécurité et IA & Data.',
+            'Première édition nationale : défis algorithmiques sur une plateforme web gamifiée. Environ 335 participants Bachelor 2 (Informatique, Cybersécurité, IA & Data). Classement : **7e au national**, **2e du campus d\'Aix-en-Provence**.',
           tags: ['Algorithmes', 'Concours'],
           linkUrl:
             'https://www.ynov.com/articles/actualites/retour-game-code-challenge?utm_source=linkedin&utm_medium=social&utm_campaign=social-game-code-challenge',
@@ -254,7 +254,7 @@ export const t: Record<Lang, TrSchema> = {
           company: 'Ynov Campus — national contest (13 campuses)',
           period: 'March 2026',
           description:
-            'National ranking (all campuses combined, ~335 Bachelor 2 participants): 7th place. Campus ranking (Aix-en-Provence): 2nd place. Context: first national edition (13 campuses), algorithmic challenges on a gamified web platform — Computer Science, Cybersecurity and AI & Data tracks.',
+            'First national edition: algorithmic challenges on a gamified web platform. Around 335 Bachelor 2 participants (Computer Science, Cybersecurity, AI & Data). Ranking: **7th nationally**, **2nd at the Aix-en-Provence campus**.',
           tags: ['Algorithms', 'Contest'],
           linkUrl:
             'https://www.ynov.com/articles/actualites/retour-game-code-challenge?utm_source=linkedin&utm_medium=social&utm_campaign=social-game-code-challenge',
