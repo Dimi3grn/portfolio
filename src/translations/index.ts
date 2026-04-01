@@ -146,12 +146,12 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Site Agence Immobilière',
-          description: 'Site vitrine pour une agence immobilière — en cours de développement. Déployé en continu sur Vercel depuis la branche principale, itérations régulières.',
+          description: 'Site vitrine pour une agence immobilière — en ligne sur un sous-domaine dédié, évolution continue depuis la branche principale (Vercel).',
           tags: ['React', 'TypeScript', 'C#', 'Python'],
           github: 'https://github.com/Dimi3grn/Ymmo',
-          live: null,
+          live: 'https://ymmo.dimitrigourrin.dev',
           status: 'En développement',
-          preview: null,
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fymmo.dimitrigourrin.dev?w=600&h=340',
         },
         {
           name: 'Bot de Signaux de Trading',
@@ -259,12 +259,12 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Real Estate Agency Website',
-          description: 'Showcase website for a real estate agency — currently in development. Continuously deployed on Vercel from the main branch, regular iterations.',
+          description: 'Showcase website for a real estate agency — live on a dedicated subdomain, ongoing updates from the main branch (Vercel).',
           tags: ['React', 'TypeScript', 'C#', 'Python'],
           github: 'https://github.com/Dimi3grn/Ymmo',
-          live: null,
+          live: 'https://ymmo.dimitrigourrin.dev',
           status: 'In development',
-          preview: null,
+          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fymmo.dimitrigourrin.dev?w=600&h=340',
         },
         {
           name: 'Trading Signal Bot',
