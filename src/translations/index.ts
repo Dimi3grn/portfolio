@@ -6,6 +6,9 @@ export interface ExperienceItem {
   period: string
   description: string
   tags: string[]
+  /** Optional external link (e.g. press article) */
+  linkUrl?: string
+  linkLabel?: string
 }
 
 export interface ProjectItem {
@@ -42,8 +45,10 @@ export interface TrSchema {
   experience: {
     title: string
     formation_label: string
+    achievements_label: string
     pro_label: string
     formation: ExperienceItem[]
+    achievements: ExperienceItem[]
     items: ExperienceItem[]
   }
   projects: {
@@ -89,6 +94,7 @@ export const t: Record<Lang, TrSchema> = {
     experience: {
       title: 'Parcours',
       formation_label: 'Formation',
+      achievements_label: 'Compétition',
       pro_label: 'Expérience professionnelle',
       formation: [
         {
@@ -104,6 +110,19 @@ export const t: Record<Lang, TrSchema> = {
           period: '2024',
           description: 'Spécialités Mathématiques & NSI (Numérique et Sciences Informatiques). Section Européenne Anglais.',
           tags: [],
+        },
+      ],
+      achievements: [
+        {
+          role: 'Game Code Challenge 2026',
+          company: 'Ynov Campus — concours national (13 campus)',
+          period: 'Mars 2026',
+          description:
+            'Première édition nationale : défis algorithmiques sur une plateforme web gamifiée. Environ 335 participants Bachelor 2 (Informatique, Cybersécurité, IA & Data). Classement : 7e au national, 2e du campus d\'Aix-en-Provence.',
+          tags: ['Algorithmes', 'Concours'],
+          linkUrl:
+            'https://www.ynov.com/articles/actualites/retour-game-code-challenge?utm_source=linkedin&utm_medium=social&utm_campaign=social-game-code-challenge',
+          linkLabel: 'Article Ynov',
         },
       ],
       items: [
@@ -211,6 +230,7 @@ export const t: Record<Lang, TrSchema> = {
     experience: {
       title: 'Background',
       formation_label: 'Education',
+      achievements_label: 'Competition',
       pro_label: 'Work experience',
       formation: [
         {
@@ -226,6 +246,19 @@ export const t: Record<Lang, TrSchema> = {
           period: '2024',
           description: 'Majors: Mathematics & Computer Science (NSI). European section in English.',
           tags: [],
+        },
+      ],
+      achievements: [
+        {
+          role: 'Game Code Challenge 2026',
+          company: 'Ynov Campus — national contest (13 campuses)',
+          period: 'March 2026',
+          description:
+            'First national edition: algorithmic challenges on a gamified web platform. Around 335 Bachelor 2 participants (Computer Science, Cybersecurity, AI & Data). Ranking: 7th nationally, 2nd at the Aix-en-Provence campus.',
+          tags: ['Algorithms', 'Contest'],
+          linkUrl:
+            'https://www.ynov.com/articles/actualites/retour-game-code-challenge?utm_source=linkedin&utm_medium=social&utm_campaign=social-game-code-challenge',
+          linkLabel: 'Ynov article',
         },
       ],
       items: [

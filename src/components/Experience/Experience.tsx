@@ -12,6 +12,16 @@ function TimelineItem({ item }: { item: ExperienceItem }) {
         <h3 className={styles.role}>{item.role}</h3>
         <p className={styles.company}>{item.company}</p>
         <p className={styles.desc}>{item.description}</p>
+        {item.linkUrl && item.linkLabel && (
+          <a
+            href={item.linkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.articleLink}
+          >
+            {item.linkLabel}
+          </a>
+        )}
         {item.tags.length > 0 && (
           <div className={styles.tags}>
             {item.tags.map(tag => (
@@ -72,6 +82,17 @@ export default function Experience() {
               ))}
             </div>
           </div>
+
+          {tr.experience.achievements.length > 0 && (
+            <div className={styles.subsection}>
+              <p className={styles.subsectionTitle}>{tr.experience.achievements_label}</p>
+              <div className={styles.timeline}>
+                {tr.experience.achievements.map((item, i) => (
+                  <TimelineItem key={`a-${i}`} item={item} />
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className={styles.subsection}>
             <p className={styles.subsectionTitle}>{tr.experience.pro_label}</p>
