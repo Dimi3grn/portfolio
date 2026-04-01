@@ -146,7 +146,7 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Site Agence Immobilière',
-          description: 'Site vitrine pour une agence immobilière — en ligne sur un sous-domaine dédié, évolution continue depuis la branche principale (Vercel).',
+          description: 'Site vitrine pour une agence immobilière — pour l\'instant tout est côté front ; le backend est provisoire. Plus tard, le backend sera déployé sur des VM au sein d\'une infrastructure réseau.',
           tags: ['React', 'TypeScript', 'C#', 'Python'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
@@ -259,7 +259,7 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Real Estate Agency Website',
-          description: 'Showcase website for a real estate agency — live on a dedicated subdomain, ongoing updates from the main branch (Vercel).',
+          description: 'Showcase website for a real estate agency — currently frontend-first with a provisional backend. Later, the backend will run on VMs within a network infrastructure.',
           tags: ['React', 'TypeScript', 'C#', 'Python'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
