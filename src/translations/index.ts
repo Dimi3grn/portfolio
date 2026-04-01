@@ -35,6 +35,7 @@ export interface TrSchema {
     tagline: string
     alternance: string
     cta_projects: string
+    cta_cv: string
     cta_contact: string
   }
   about: {
@@ -84,6 +85,7 @@ export const t: Record<Lang, TrSchema> = {
       tagline: 'Je conçois des applications complètes — du backend à l\'interface. J\'accorde une attention particulière aux architectures robustes et au code maintenable : des fondations solides qui tiennent dans le temps.',
       alternance: 'En recherche d\'alternance · 12–24 mois · Rythme : 2 sem. entreprise / 1 sem. cours',
       cta_projects: 'Voir mes projets',
+      cta_cv: 'Télécharger mon CV',
       cta_contact: 'Me contacter',
     },
     about: {
@@ -220,6 +222,7 @@ export const t: Record<Lang, TrSchema> = {
       tagline: 'I build complete applications — from backend to interface. I pay close attention to robust architectures and maintainable code: solid foundations that hold up over time.',
       alternance: 'Looking for work-study · 12–24 months · Rhythm: 2 weeks company / 1 week school',
       cta_projects: 'See my work',
+      cta_cv: 'Download CV',
       cta_contact: 'Get in touch',
     },
     about: {

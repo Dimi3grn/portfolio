@@ -1,5 +1,9 @@
 import { useLang } from '../../context/LangContext'
+import { FiDownload } from 'react-icons/fi'
 import styles from './Hero.module.css'
+
+const CV_HREF = '/cv/GOURRIN_DIMITRI_CV.pdf'
+const CV_FILENAME = 'GOURRIN_DIMITRI_CV.pdf'
 
 export default function Hero() {
   const { tr } = useLang()
@@ -21,6 +25,15 @@ export default function Hero() {
         <div className={styles.ctas}>
           <a href="#projects" className={styles.ctaPrimary}>
             {tr.hero.cta_projects}
+          </a>
+          <a
+            href={CV_HREF}
+            download={CV_FILENAME}
+            className={styles.ctaCv}
+            aria-label={tr.hero.cta_cv}
+          >
+            <FiDownload className={styles.ctaCvIcon} aria-hidden />
+            {tr.hero.cta_cv}
           </a>
           <a href="#contact" className={styles.ctaSecondary}>
             {tr.hero.cta_contact}
