@@ -1,0 +1,204 @@
+.inner {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 180px 40px 160px;
+}
+
+.title {
+  margin: 0 0 60px 0;
+}
+
+/* Padded wrapper: the line/dot live at left:20px inside it, item
+   markers at left:-20px relative to the items — one shared axis. */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.progressLine {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 1px;
+  height: 0;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(122, 46, 46, 0.35), rgba(122, 46, 46, 0.65));
+  transition: height 60ms linear;
+}
+
+.progressDot {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accent-light);
+  box-shadow:
+    0 0 8px 3px rgba(122, 46, 46, 0.55),
+    0 0 26px 10px rgba(122, 46, 46, 0.25);
+  transition: top 60ms linear;
+}
+
+.groupLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-meta);
+  margin: 0 0 32px 0;
+  opacity: 0.7;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.item:has(+ .groupLabel) {
+  margin-bottom: 76px;
+}
+
+.itemLast {
+  margin-bottom: 0;
+}
+
+.markerRing {
+  position: absolute;
+  left: -20px;
+  top: 11px;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--accent);
+}
+
+.markerCenter {
+  position: absolute;
+  left: -20px;
+  top: 11px;
+  width: 4px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.period {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--heading);
+}
+
+.company {
+  font-size: 13.5px;
+  color: var(--text-meta);
+  margin: 0 0 12px 0;
+}
+
+.desc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0;
+}
+
+.desc strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.desc:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 520px;
+}
+
+.bullets:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.bullets li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.bulletDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  transform: translateY(-2px);
+}
+
+.articleLink {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(122, 46, 46, 0.35);
+  text-decoration: none;
+  margin-bottom: 14px;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.articleLink:hover {
+  color: var(--accent-light);
+  border-color: var(--accent-light);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: 150px 24px 120px;
+  }
+
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .progressLine,
+  .progressDot {
+    left: 14px;
+  }
+
+  .markerRing,
+  .markerCenter {
+    left: -18px;
+  }
+}

@@ -1,0 +1,32 @@
+.footerNav {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+.prev,
+.next {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.prev {
+  color: var(--text-meta);
+}
+
+.prev:hover {
+  color: var(--accent);
+}
+
+.next {
+  color: var(--accent);
+}
+
+.next:hover {
+  color: var(--accent-light);
+}

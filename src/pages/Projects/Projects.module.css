@@ -1,0 +1,129 @@
+.inner {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 180px 40px 160px;
+}
+
+.title {
+  margin: 0 0 60px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(26, 24, 21, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Clickable preview thumbnail (mShots) ── */
+.previewWrap {
+  display: block;
+  /* full bleed above the 28px card padding */
+  margin: -28px -28px 20px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface-hover);
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.92;
+}
+
+.previewWrap:hover .previewImg {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.badgeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.badgeSpacer {
+  height: 24px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(122, 46, 46, 0.08);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(122, 46, 46, 0.22);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: var(--heading);
+}
+
+.cardDesc {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #645c4e;
+  margin: 0 0 18px 0;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .inner {
+    padding: 150px 24px 120px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

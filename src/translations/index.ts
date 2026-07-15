@@ -5,6 +5,8 @@ export interface ExperienceItem {
   company: string
   period: string
   description: string
+  /** Optional bullet list rendered below the description */
+  bullets?: string[]
   tags: string[]
   /** Optional external link (e.g. press article) */
   linkUrl?: string
@@ -19,6 +21,18 @@ export interface ProjectItem {
   live: string | null
   status: string | null
   preview: string | null
+}
+
+/**
+ * Miniatures via mShots (WordPress) : cache très agressif. Si le site a renvoyé une 404, la capture
+ * peut rester « figée ». Incrémente cette valeur puis redéploie pour forcer une nouvelle capture.
+ * Côté navigateur : Ctrl+Shift+R (vidage cache de la page) après déploiement.
+ */
+export const PROJECT_PREVIEW_SNAPSHOT_VERSION = '2026-04-12'
+
+/** URL mShots ; `siteUrl` = URL complète du site (ex. https://rythmit.dimitrigourrin.dev). */
+export function projectPreviewMshot(siteUrl: string, w = 600, h = 340): string {
+  return `https://s0.wp.com/mshots/v1/${encodeURIComponent(siteUrl)}?w=${w}&h=${h}&cv=${PROJECT_PREVIEW_SNAPSHOT_VERSION}`
 }
 
 export interface TrSchema {
@@ -132,7 +146,12 @@ export const t: Record<Lang, TrSchema> = {
           role: 'Stage — Développement Web',
           company: 'Indépendant · Infrastructure & Réseau',
           period: 'Mai — Juil. 2026',
-          description: 'Conception et développement d\'un site web pour l\'activité du client. Travail en lien direct avec le porteur de projet sur les priorités et le contenu. Exposition aux enjeux réseau, infrastructure et Docker en contexte professionnel.',
+          description: '',
+          bullets: [
+            'Administration réseau & infra : cartographie, gestion DNS/DHCP/VPN, supervision et monitoring.',
+            'Développement web : nouvelles fonctionnalités, audit qualité du code, refactoring et optimisation UI.',
+            'DevOps : conteneurisation Docker/Compose, scripts Bash/Python, initiation Ansible, pipeline CI/CD (GitHub Actions).',
+          ],
           tags: ['React', 'HTML/CSS', 'JavaScript', 'Docker', 'Linux'],
         },
         {
@@ -154,7 +173,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: 'https://rythmit.dimitrigourrin.dev',
           status: 'En développement',
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frythmit.dimitrigourrin.dev?w=600&h=340',
+          preview: projectPreviewMshot('https://rythmit.dimitrigourrin.dev'),
         },
         {
           name: 'Application de Gestion de Commandes',
@@ -163,7 +182,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://menu.dimitrigourrin.dev',
           status: null,
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fmenu.dimitrigourrin.dev?w=600&h=340',
+          preview: projectPreviewMshot('https://menu.dimitrigourrin.dev'),
         },
         {
           name: 'Site Agence Immobilière',
@@ -172,7 +191,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
           status: 'En développement',
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fymmo.dimitrigourrin.dev?w=600&h=340',
+          preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
           name: 'Bot de Signaux de Trading',
@@ -269,7 +288,12 @@ export const t: Record<Lang, TrSchema> = {
           role: 'Internship — Web Development',
           company: 'Freelance · Infrastructure & Network',
           period: 'May — Jul. 2026',
-          description: 'Design and development of a website for the client\'s business. Direct collaboration with the project owner on priorities and content. Exposure to networking, infrastructure and Docker in a professional context.',
+          description: '',
+          bullets: [
+            'Network & infrastructure administration: mapping, DNS/DHCP/VPN management, supervision and monitoring.',
+            'Web development: new features, code quality audits, refactoring and UI optimization.',
+            'DevOps: Docker/Compose containerization, Bash/Python scripting, introduction to Ansible, CI/CD pipeline (GitHub Actions).',
+          ],
           tags: ['React', 'HTML/CSS', 'JavaScript', 'Docker', 'Linux'],
         },
         {
@@ -291,7 +315,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: 'https://rythmit.dimitrigourrin.dev',
           status: 'In development',
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Frythmit.dimitrigourrin.dev?w=600&h=340',
+          preview: projectPreviewMshot('https://rythmit.dimitrigourrin.dev'),
         },
         {
           name: 'Order Management App',
@@ -300,7 +324,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://menu.dimitrigourrin.dev',
           status: null,
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fmenu.dimitrigourrin.dev?w=600&h=340',
+          preview: projectPreviewMshot('https://menu.dimitrigourrin.dev'),
         },
         {
           name: 'Real Estate Agency Website',
@@ -309,7 +333,7 @@ export const t: Record<Lang, TrSchema> = {
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
           status: 'In development',
-          preview: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Fymmo.dimitrigourrin.dev?w=600&h=340',
+          preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
           name: 'Trading Signal Bot',
