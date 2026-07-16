@@ -7,26 +7,30 @@ import {
   SiPhp, SiDotnet, SiMariadb, SiDocker, SiRust, SiCplusplus, SiLua,
 } from 'react-icons/si'
 import { VscVscode } from 'react-icons/vsc'
-import styles from './TechStack.module.css'
+import BlueprintBackground from '../../components/BlueprintBackground/BlueprintBackground'
+import PageFooterNav from '../../components/PageFooterNav/PageFooterNav'
+import styles from './Stack.module.css'
 
 interface StackItem {
-  Icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }>
+  Icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>
   name: string
   color: string
   url: string
 }
 
 // 20 items → diamond rows: 1 + 2 + 3 + 4 + 5 + 5
+// Colors from the Paper & Oxblood handoff (brand hexes, darkened where
+// too light for a white background: GitHub, Vercel, Linux, JS, …).
 const mainStack: StackItem[] = [
   // ── Row 1 (1) ──
-  { Icon: SiReact,       name: 'React',      color: '#61DAFB', url: 'https://react.dev' },
+  { Icon: SiReact,       name: 'React',      color: '#2596a8', url: 'https://react.dev' },
   // ── Row 2 (2) ──
-  { Icon: SiOpenjdk,     name: 'Java',       color: '#f89820', url: 'https://www.java.com' },
-  { Icon: SiGo,          name: 'Go',         color: '#00ADD8', url: 'https://go.dev' },
+  { Icon: SiOpenjdk,     name: 'Java',       color: '#c97812', url: 'https://www.java.com' },
+  { Icon: SiGo,          name: 'Go',         color: '#0089ac', url: 'https://go.dev' },
   // ── Row 3 (3) ──
-  { Icon: SiPython,      name: 'Python',     color: '#4B8BBE', url: 'https://www.python.org' },
+  { Icon: SiPython,      name: 'Python',     color: '#3d6d94', url: 'https://www.python.org' },
   { Icon: SiDotnet,      name: 'C#',         color: '#9B4F96', url: 'https://dotnet.microsoft.com' },
-  { Icon: SiJavascript,  name: 'JavaScript', color: '#F7DF1E', url: 'https://developer.mozilla.org/docs/Web/JavaScript' },
+  { Icon: SiJavascript,  name: 'JavaScript', color: '#a68b00', url: 'https://developer.mozilla.org/docs/Web/JavaScript' },
   // ── Row 4 (4) ──
   { Icon: SiTypescript,  name: 'TypeScript', color: '#3178C6', url: 'https://www.typescriptlang.org' },
   { Icon: SiHtml5,       name: 'HTML5',      color: '#E34F26', url: 'https://developer.mozilla.org/docs/Web/HTML' },
@@ -35,15 +39,15 @@ const mainStack: StackItem[] = [
   // ── Row 5 (5) ──
   { Icon: SiMysql,       name: 'MySQL',      color: '#4479A1', url: 'https://www.mysql.com' },
   { Icon: SiGit,         name: 'Git',        color: '#F05032', url: 'https://git-scm.com' },
-  { Icon: SiGithub,      name: 'GitHub',     color: '#e0e0e0', url: 'https://github.com' },
+  { Icon: SiGithub,      name: 'GitHub',     color: '#333333', url: 'https://github.com' },
   { Icon: SiBootstrap,   name: 'Bootstrap',  color: '#7952B3', url: 'https://getbootstrap.com' },
-  { Icon: SiVercel,      name: 'Vercel',     color: '#e0e0e0', url: 'https://vercel.com' },
+  { Icon: SiVercel,      name: 'Vercel',     color: '#161310', url: 'https://vercel.com' },
   // ── Row 6 (5) ──
   { Icon: VscVscode,     name: 'VS Code',    color: '#007ACC', url: 'https://code.visualstudio.com' },
   { Icon: SiFigma,       name: 'Figma',      color: '#F24E1E', url: 'https://www.figma.com' },
   { Icon: SiPostman,     name: 'Postman',    color: '#FF6C37', url: 'https://www.postman.com' },
   { Icon: SiJupyter,     name: 'Jupyter',    color: '#F37626', url: 'https://jupyter.org' },
-  { Icon: SiLinux,       name: 'Linux',      color: '#e8c84a', url: 'https://www.linux.org' },
+  { Icon: SiLinux,       name: 'Linux',      color: '#b8860b', url: 'https://www.linux.org' },
 ]
 
 const secondaryStack: StackItem[] = [
@@ -67,68 +71,70 @@ function splitIntoRows(items: StackItem[], rowSizes: number[]): StackItem[][] {
   return rows
 }
 
-function DiamondGrid({ items }: { items: StackItem[] }) {
-  const rows = splitIntoRows(items, DIAMOND_ROWS)
+export default function Stack() {
+  const { tr } = useLang()
+  const rows = splitIntoRows(mainStack, DIAMOND_ROWS)
+
   return (
-    <div className={styles.diamond}>
-      {rows.map((row, ri) => (
-        <div key={ri} className={styles.diamondRow}>
-          {row.map(({ Icon, name, color, url }) => (
+    <div className="page">
+      <BlueprintBackground />
+      <div className="page-corner">04 / 05</div>
+
+      <div className={styles.inner}>
+        <span className="eyebrow">04</span>
+        <h1 className={`page-title ${styles.title}`}>{tr.tech.title}</h1>
+
+        <p className={styles.tierLabel}>{tr.tech.main_label}</p>
+        <div className={styles.diamond}>
+          {rows.map((row, ri) => (
+            <div key={ri} className={styles.diamondRow}>
+              {row.map(({ Icon, name, color, url }) => (
+                <a
+                  key={name}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.chip}
+                  style={{ color }}
+                >
+                  <span className={styles.chipCard}>
+                    <Icon size={22} style={{ color }} />
+                  </span>
+                  <span className={styles.chipLabel}>{name}</span>
+                </a>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        <p className={styles.tierLabelSecondary}>{tr.tech.secondary_label}</p>
+        <div className={styles.pillRow}>
+          {secondaryStack.map(({ Icon, name, color, url }) => (
             <a
               key={name}
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.item}
+              className={styles.pill}
+              style={{ color }}
             >
-              <Icon className={styles.icon} style={{ color }} size={28} />
-              <span className={styles.label}>{name}</span>
+              <span className={styles.pillSwatch}>
+                <Icon size={16} style={{ color }} />
+              </span>
+              <span className={styles.pillLabel}>{name}</span>
             </a>
           ))}
         </div>
-      ))}
-    </div>
-  )
-}
 
-function FlatGrid({ items }: { items: StackItem[] }) {
-  return (
-    <div className={styles.flat}>
-      {items.map(({ Icon, name, color, url }) => (
-        <a
-          key={name}
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${styles.item} ${styles.itemSm}`}
-        >
-          <Icon className={styles.icon} style={{ color }} size={22} />
-          <span className={styles.label}>{name}</span>
-        </a>
-      ))}
-    </div>
-  )
-}
-
-export default function TechStack() {
-  const { tr } = useLang()
-
-  return (
-    <section id="tech" className={styles.section}>
-      <div className="container">
-        <span className="section-num">04</span>
-        <h2 className="section-title">{tr.tech.title}</h2>
-
-        <div className={styles.tier}>
-          <p className={styles.tierLabel}>{tr.tech.main_label}</p>
-          <DiamondGrid items={mainStack} />
-        </div>
-
-        <div className={styles.tier}>
-          <p className={styles.tierLabel}>{tr.tech.secondary_label}</p>
-          <FlatGrid items={secondaryStack} />
+        <div className={styles.footerSlot}>
+          <PageFooterNav
+            prevTo="/projects"
+            prevLabel={tr.nav.projects}
+            nextTo="/contact"
+            nextLabel={tr.nav.contact}
+          />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
