@@ -103,7 +103,7 @@ export const t: Record<Lang, TrSchema> = {
     hero: {
       tag: 'Étudiant · Développeur Fullstack',
       name: 'Dimitri Gourrin',
-      tagline: 'Je conçois des applications complètes — du backend à l\'interface. J\'accorde une attention particulière aux architectures robustes et au code maintenable : des fondations solides qui tiennent dans le temps.',
+      tagline: 'Je conçois des applications complètes - du backend à l\'interface. J\'accorde une attention particulière aux architectures robustes et au code maintenable : des fondations solides qui tiennent dans le temps.',
       alternance: 'En recherche d\'alternance · 12–24 mois · Rythme : 2 sem. entreprise / 1 sem. cours',
       cta_projects: 'Voir mes projets',
       cta_cv: 'Télécharger mon CV',
@@ -111,7 +111,7 @@ export const t: Record<Lang, TrSchema> = {
     },
     about: {
       title: 'À propos',
-      body: 'Développeur Fullstack en Bachelor Informatique à Ynov Aix, je construis des applications complètes — de la base de données à l\'interface. J\'accorde une attention particulière aux architectures backend solides et au code maintenable : des fondations qui tiennent dans le temps. Curieux de nature, je m\'intéresse autant à la manière dont un système est conçu qu\'au problème qu\'il résout. Bien qu\'orienté développement, le milieu de l\'infrastructure et des réseaux m\'intéresse réellement — une dimension que je considère nécessaire dans le métier pour comprendre et concevoir des systèmes qui fonctionnent vraiment en production. Je cherche une alternance de 12 à 24 mois pour continuer à progresser dans un environnement professionnel.',
+      body: 'Développeur Fullstack en Bachelor Informatique à Ynov Aix, je construis des applications complètes - de la base de données à l\'interface. J\'accorde une attention particulière aux architectures backend solides et au code maintenable : des fondations qui tiennent dans le temps. Curieux de nature, je m\'intéresse autant à la manière dont un système est conçu qu\'au problème qu\'il résout. Bien qu\'orienté développement, le milieu de l\'infrastructure et des réseaux m\'intéresse réellement - une dimension que je considère nécessaire dans le métier pour comprendre et concevoir des systèmes qui fonctionnent vraiment en production. Je cherche une alternance de 12 à 24 mois pour continuer à progresser dans un environnement professionnel.',
       facts: ['Ynov Campus · Aix-en-Provence', 'Anglais C1 · Russe Natif'],
     },
     experience: {
@@ -123,7 +123,7 @@ export const t: Record<Lang, TrSchema> = {
         {
           role: 'Bachelor Informatique',
           company: 'Ynov Campus · Aix-en-Provence',
-          period: '2024 — 2029',
+          period: '2024 - 2029',
           description: 'Spécialisation Développement Logiciel & Web.',
           tags: [],
         },
@@ -138,7 +138,7 @@ export const t: Record<Lang, TrSchema> = {
       achievements: [
         {
           role: 'Game Code Challenge 2026',
-          company: 'Ynov Campus — concours national (13 campus)',
+          company: 'Ynov Campus - concours national (13 campus)',
           period: 'Mars 2026',
           description:
             'Première édition nationale : défis algorithmiques sur une plateforme web gamifiée. Environ 335 participants Bachelor 2 (Informatique, Cybersécurité, IA & Data). Classement : **7e au national**, **2e du campus d\'Aix-en-Provence**.',
@@ -150,9 +150,9 @@ export const t: Record<Lang, TrSchema> = {
       ],
       items: [
         {
-          role: 'Stage — Développement Web',
+          role: 'Stage - Développement Web',
           company: 'Indépendant · Infrastructure & Réseau',
-          period: 'Mai — Juil. 2026',
+          period: 'Mai - Juil. 2026',
           description: '',
           bullets: [
             'Administration réseau & infra : cartographie, gestion DNS/DHCP/VPN, supervision et monitoring.',
@@ -175,7 +175,7 @@ export const t: Record<Lang, TrSchema> = {
       items: [
         {
           name: 'Site Agence Immobilière',
-          description: 'Site vitrine pour une agence immobilière — pour l\'instant tout est côté front ; le backend est provisoire. Plus tard, le backend sera déployé sur des VM au sein d\'une infrastructure réseau.',
+          description: 'Site vitrine pour une agence immobilière - pour l\'instant tout est côté front ; le backend est provisoire. Plus tard, le backend sera déployé sur des VM au sein d\'une infrastructure réseau.',
           tags: ['React', 'TypeScript', 'C#', 'Python'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
@@ -184,7 +184,7 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Application de Gestion de Commandes',
-          description: 'Interface fullstack pour un restaurant — frontend React/TypeScript avec dashboard administrateur. Authentification avec rôles (Client / Admin), CRUD complet sur les recettes.',
+          description: 'Interface fullstack pour un restaurant - frontend React/TypeScript avec dashboard administrateur. Authentification avec rôles (Client / Admin), CRUD complet sur les recettes.',
           tags: ['React', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://menu.dimitrigourrin.dev',
@@ -193,7 +193,7 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Forum Communautaire Musical',
-          description: 'Application fullstack — forum de partage musical avec système de batailles d\'artistes, profils utilisateurs et interactions sociales. Architecture MVC en Go, authentification JWT, base de données MySQL.',
+          description: 'Application fullstack - forum de partage musical avec système de batailles d\'artistes, profils utilisateurs et interactions sociales. Architecture MVC en Go, authentification JWT, base de données MySQL.',
           tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: 'https://rythmit.dimitrigourrin.dev',
@@ -210,8 +210,8 @@ export const t: Record<Lang, TrSchema> = {
           preview: null,
         },
         {
-          name: 'La Tour de Cristal — Livre-jeu',
-          description: 'Jeu de type livre dont vous êtes le héros (inspiré de Loup Solitaire), en Java. Architecture MVC, double interface console (ANSI) et graphique JavaFX, combats, inventaire, sauvegardes par sérialisation. Application desktop — non hébergeable en ligne. Projet collectif Ynov B1 (rôle : modèle, logique métier, combat, persistance).',
+          name: 'La Tour de Cristal - Livre-jeu',
+          description: 'Jeu de type livre dont vous êtes le héros (inspiré de Loup Solitaire), en Java. Architecture MVC, double interface console (ANSI) et graphique JavaFX, combats, inventaire, sauvegardes par sérialisation. Application desktop - non hébergeable en ligne. Projet collectif Ynov B1 (rôle : modèle, logique métier, combat, persistance).',
           tags: ['Java', 'JavaFX', 'MVC', 'Sérialisation'],
           github: 'https://github.com/Dimi3grn/java-project',
           live: null,
@@ -228,7 +228,7 @@ export const t: Record<Lang, TrSchema> = {
     blog: {
       title: 'Blog',
       wip_title: 'En cours de rédaction',
-      wip_body: 'Les premiers articles arrivent bientôt — retours d\'expérience, notes techniques et coulisses de mes projets.',
+      wip_body: 'Les premiers articles arrivent bientôt - retours d\'expérience, notes techniques et coulisses de mes projets.',
     },
     contact: {
       title: 'Contact',
@@ -251,7 +251,7 @@ export const t: Record<Lang, TrSchema> = {
     hero: {
       tag: 'Student · Fullstack Developer',
       name: 'Dimitri Gourrin',
-      tagline: 'I build complete applications — from backend to interface. I pay close attention to robust architectures and maintainable code: solid foundations that hold up over time.',
+      tagline: 'I build complete applications - from backend to interface. I pay close attention to robust architectures and maintainable code: solid foundations that hold up over time.',
       alternance: 'Looking for work-study · 12–24 months · Rhythm: 2 weeks company / 1 week school',
       cta_projects: 'See my work',
       cta_cv: 'Download CV',
@@ -259,7 +259,7 @@ export const t: Record<Lang, TrSchema> = {
     },
     about: {
       title: 'About',
-      body: 'Fullstack developer studying Computer Science at Ynov Aix, I build complete applications — from database to user interface. I pay close attention to solid backend architectures and maintainable code: foundations that hold up over time. Curious by nature, I\'m as interested in how a system is designed as in the problem it solves. While I\'m primarily development-oriented, infrastructure and networking genuinely interest me — a dimension I consider necessary in the field to understand and build systems that actually work in production. I\'m looking for a 12 to 24-month work-study position to keep growing in a professional environment.',
+      body: 'Fullstack developer studying Computer Science at Ynov Aix, I build complete applications - from database to user interface. I pay close attention to solid backend architectures and maintainable code: foundations that hold up over time. Curious by nature, I\'m as interested in how a system is designed as in the problem it solves. While I\'m primarily development-oriented, infrastructure and networking genuinely interest me - a dimension I consider necessary in the field to understand and build systems that actually work in production. I\'m looking for a 12 to 24-month work-study position to keep growing in a professional environment.',
       facts: ['Ynov Campus · Aix-en-Provence', 'English C1 · Russian Native'],
     },
     experience: {
@@ -271,7 +271,7 @@ export const t: Record<Lang, TrSchema> = {
         {
           role: 'Bachelor of Computer Science',
           company: 'Ynov Campus · Aix-en-Provence',
-          period: '2024 — 2029',
+          period: '2024 - 2029',
           description: 'Specialization in Software & Web Development.',
           tags: [],
         },
@@ -286,7 +286,7 @@ export const t: Record<Lang, TrSchema> = {
       achievements: [
         {
           role: 'Game Code Challenge 2026',
-          company: 'Ynov Campus — national contest (13 campuses)',
+          company: 'Ynov Campus - national contest (13 campuses)',
           period: 'March 2026',
           description:
             'First national edition: algorithmic challenges on a gamified web platform. Around 335 Bachelor 2 participants (Computer Science, Cybersecurity, AI & Data). Ranking: **7th nationally**, **2nd at the Aix-en-Provence campus**.',
@@ -298,9 +298,9 @@ export const t: Record<Lang, TrSchema> = {
       ],
       items: [
         {
-          role: 'Internship — Web Development',
+          role: 'Internship - Web Development',
           company: 'Freelance · Infrastructure & Network',
-          period: 'May — Jul. 2026',
+          period: 'May - Jul. 2026',
           description: '',
           bullets: [
             'Network & infrastructure administration: mapping, DNS/DHCP/VPN management, supervision and monitoring.',
@@ -323,7 +323,7 @@ export const t: Record<Lang, TrSchema> = {
       items: [
         {
           name: 'Real Estate Agency Website',
-          description: 'Showcase website for a real estate agency — currently frontend-first with a provisional backend. Later, the backend will run on VMs within a network infrastructure.',
+          description: 'Showcase website for a real estate agency - currently frontend-first with a provisional backend. Later, the backend will run on VMs within a network infrastructure.',
           tags: ['React', 'TypeScript', 'C#', 'Python'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
@@ -332,7 +332,7 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Order Management App',
-          description: 'Fullstack restaurant interface — React/TypeScript frontend with admin dashboard. Role-based authentication (Client / Admin), full CRUD on recipes.',
+          description: 'Fullstack restaurant interface - React/TypeScript frontend with admin dashboard. Role-based authentication (Client / Admin), full CRUD on recipes.',
           tags: ['React', 'TypeScript', 'Tailwind CSS'],
           github: 'https://github.com/Dimi3grn/Restaurant-orders-website',
           live: 'https://menu.dimitrigourrin.dev',
@@ -341,7 +341,7 @@ export const t: Record<Lang, TrSchema> = {
         },
         {
           name: 'Musical Community Forum',
-          description: 'Fullstack app — music sharing forum with artist battle system, user profiles and social interactions. MVC architecture in Go, JWT authentication, MySQL database.',
+          description: 'Fullstack app - music sharing forum with artist battle system, user profiles and social interactions. MVC architecture in Go, JWT authentication, MySQL database.',
           tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
           github: 'https://github.com/Dimi3grn/Rythm-it',
           live: 'https://rythmit.dimitrigourrin.dev',
@@ -358,8 +358,8 @@ export const t: Record<Lang, TrSchema> = {
           preview: null,
         },
         {
-          name: 'The Crystal Tower — Gamebook',
-          description: 'Choose-your-own-adventure game (inspired by Lone Wolf), built in Java. MVC architecture, dual console (ANSI) and JavaFX UI, combat system, inventory, saves via Java serialization. Desktop app — not deployable as a website. Collaborative Ynov B1 project (my focus: model, game logic, combat, persistence).',
+          name: 'The Crystal Tower - Gamebook',
+          description: 'Choose-your-own-adventure game (inspired by Lone Wolf), built in Java. MVC architecture, dual console (ANSI) and JavaFX UI, combat system, inventory, saves via Java serialization. Desktop app - not deployable as a website. Collaborative Ynov B1 project (my focus: model, game logic, combat, persistence).',
           tags: ['Java', 'JavaFX', 'MVC', 'Serialization'],
           github: 'https://github.com/Dimi3grn/java-project',
           live: null,
@@ -376,7 +376,7 @@ export const t: Record<Lang, TrSchema> = {
     blog: {
       title: 'Blog',
       wip_title: 'Currently being written',
-      wip_body: 'First articles coming soon — hands-on write-ups, technical notes and behind-the-scenes of my projects.',
+      wip_body: 'First articles coming soon - hands-on write-ups, technical notes and behind-the-scenes of my projects.',
     },
     contact: {
       title: 'Contact',
