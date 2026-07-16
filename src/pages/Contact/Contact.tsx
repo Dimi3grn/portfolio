@@ -43,10 +43,10 @@ export default function Contact() {
   return (
     <div className={`page ${styles.page}`}>
       <BlueprintBackground />
-      <div className="page-corner">05 / 05</div>
+      <div className="page-corner">06 / 06</div>
 
       <div className={styles.inner}>
-        <span className="eyebrow">05</span>
+        <span className="eyebrow">06</span>
         <h1 className={`page-title ${styles.title}`}>{tr.contact.title}</h1>
         <p className={styles.tagline}>{tr.contact.tagline}</p>
 
@@ -91,8 +91,8 @@ export default function Contact() {
 
       <div className={styles.footer}>
         <PageFooterNav
-          prevTo="/stack"
-          prevLabel={tr.nav.tech}
+          prevTo="/blog"
+          prevLabel={tr.nav.blog}
           nextTo="/"
           nextLabel={lang === 'fr' ? 'Accueil' : 'Home'}
         />

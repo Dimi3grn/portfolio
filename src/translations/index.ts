@@ -41,6 +41,7 @@ export interface TrSchema {
     experience: string
     projects: string
     tech: string
+    blog: string
     contact: string
   }
   hero: {
@@ -75,6 +76,11 @@ export interface TrSchema {
     main_label: string
     secondary_label: string
   }
+  blog: {
+    title: string
+    wip_title: string
+    wip_body: string
+  }
   contact: {
     title: string
     tagline: string
@@ -91,6 +97,7 @@ export const t: Record<Lang, TrSchema> = {
       experience: 'Expérience',
       projects: 'Projets',
       tech: 'Stack',
+      blog: 'Blog',
       contact: 'Contact',
     },
     hero: {
@@ -167,13 +174,13 @@ export const t: Record<Lang, TrSchema> = {
       title: 'Projets',
       items: [
         {
-          name: 'Forum Communautaire Musical',
-          description: 'Application fullstack — forum de partage musical avec système de batailles d\'artistes, profils utilisateurs et interactions sociales. Architecture MVC en Go, authentification JWT, base de données MySQL.',
-          tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
-          github: 'https://github.com/Dimi3grn/Rythm-it',
-          live: 'https://rythmit.dimitrigourrin.dev',
+          name: 'Site Agence Immobilière',
+          description: 'Site vitrine pour une agence immobilière — pour l\'instant tout est côté front ; le backend est provisoire. Plus tard, le backend sera déployé sur des VM au sein d\'une infrastructure réseau.',
+          tags: ['React', 'TypeScript', 'C#', 'Python'],
+          github: 'https://github.com/Dimi3grn/Ymmo',
+          live: 'https://ymmo.dimitrigourrin.dev',
           status: 'En développement',
-          preview: projectPreviewMshot('https://rythmit.dimitrigourrin.dev'),
+          preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
           name: 'Application de Gestion de Commandes',
@@ -185,13 +192,13 @@ export const t: Record<Lang, TrSchema> = {
           preview: projectPreviewMshot('https://menu.dimitrigourrin.dev'),
         },
         {
-          name: 'Site Agence Immobilière',
-          description: 'Site vitrine pour une agence immobilière — pour l\'instant tout est côté front ; le backend est provisoire. Plus tard, le backend sera déployé sur des VM au sein d\'une infrastructure réseau.',
-          tags: ['React', 'TypeScript', 'C#', 'Python'],
-          github: 'https://github.com/Dimi3grn/Ymmo',
-          live: 'https://ymmo.dimitrigourrin.dev',
+          name: 'Forum Communautaire Musical',
+          description: 'Application fullstack — forum de partage musical avec système de batailles d\'artistes, profils utilisateurs et interactions sociales. Architecture MVC en Go, authentification JWT, base de données MySQL.',
+          tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
+          github: 'https://github.com/Dimi3grn/Rythm-it',
+          live: 'https://rythmit.dimitrigourrin.dev',
           status: 'En développement',
-          preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
+          preview: projectPreviewMshot('https://rythmit.dimitrigourrin.dev'),
         },
         {
           name: 'Bot de Signaux de Trading',
@@ -218,6 +225,11 @@ export const t: Record<Lang, TrSchema> = {
       main_label: 'Stack principale',
       secondary_label: 'Également pratiqué',
     },
+    blog: {
+      title: 'Blog',
+      wip_title: 'En cours de rédaction',
+      wip_body: 'Les premiers articles arrivent bientôt — retours d\'expérience, notes techniques et coulisses de mes projets.',
+    },
     contact: {
       title: 'Contact',
       tagline: 'Un projet, une alternance, une question ?',
@@ -233,6 +245,7 @@ export const t: Record<Lang, TrSchema> = {
       experience: 'Experience',
       projects: 'Projects',
       tech: 'Stack',
+      blog: 'Blog',
       contact: 'Contact',
     },
     hero: {
@@ -309,13 +322,13 @@ export const t: Record<Lang, TrSchema> = {
       title: 'Projects',
       items: [
         {
-          name: 'Musical Community Forum',
-          description: 'Fullstack app — music sharing forum with artist battle system, user profiles and social interactions. MVC architecture in Go, JWT authentication, MySQL database.',
-          tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
-          github: 'https://github.com/Dimi3grn/Rythm-it',
-          live: 'https://rythmit.dimitrigourrin.dev',
+          name: 'Real Estate Agency Website',
+          description: 'Showcase website for a real estate agency — currently frontend-first with a provisional backend. Later, the backend will run on VMs within a network infrastructure.',
+          tags: ['React', 'TypeScript', 'C#', 'Python'],
+          github: 'https://github.com/Dimi3grn/Ymmo',
+          live: 'https://ymmo.dimitrigourrin.dev',
           status: 'In development',
-          preview: projectPreviewMshot('https://rythmit.dimitrigourrin.dev'),
+          preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
           name: 'Order Management App',
@@ -327,13 +340,13 @@ export const t: Record<Lang, TrSchema> = {
           preview: projectPreviewMshot('https://menu.dimitrigourrin.dev'),
         },
         {
-          name: 'Real Estate Agency Website',
-          description: 'Showcase website for a real estate agency — currently frontend-first with a provisional backend. Later, the backend will run on VMs within a network infrastructure.',
-          tags: ['React', 'TypeScript', 'C#', 'Python'],
-          github: 'https://github.com/Dimi3grn/Ymmo',
-          live: 'https://ymmo.dimitrigourrin.dev',
+          name: 'Musical Community Forum',
+          description: 'Fullstack app — music sharing forum with artist battle system, user profiles and social interactions. MVC architecture in Go, JWT authentication, MySQL database.',
+          tags: ['Go', 'Gorilla Mux', 'MySQL', 'JWT', 'HTML/CSS/JS'],
+          github: 'https://github.com/Dimi3grn/Rythm-it',
+          live: 'https://rythmit.dimitrigourrin.dev',
           status: 'In development',
-          preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
+          preview: projectPreviewMshot('https://rythmit.dimitrigourrin.dev'),
         },
         {
           name: 'Trading Signal Bot',
@@ -359,6 +372,11 @@ export const t: Record<Lang, TrSchema> = {
       title: 'Tech Stack',
       main_label: 'Main stack',
       secondary_label: 'Also worked with',
+    },
+    blog: {
+      title: 'Blog',
+      wip_title: 'Currently being written',
+      wip_body: 'First articles coming soon — hands-on write-ups, technical notes and behind-the-scenes of my projects.',
     },
     contact: {
       title: 'Contact',

@@ -107,7 +107,7 @@ export default function Experience() {
   return (
     <div className="page">
       <BlueprintBackground />
-      <div className="page-corner">02 / 05</div>
+      <div className="page-corner">02 / 06</div>
 
       <div className={styles.inner}>
         <span className="eyebrow">02</span>

@@ -8,6 +8,7 @@ import About from './pages/About/About'
 import Experience from './pages/Experience/Experience'
 import Projects from './pages/Projects/Projects'
 import Stack from './pages/Stack/Stack'
+import Blog from './pages/Blog/Blog'
 import Contact from './pages/Contact/Contact'
 import NotFound from './pages/NotFound/NotFound'
 
@@ -31,6 +32,7 @@ function PageMeta() {
       '/experience': tr.experience.title,
       '/projects': tr.nav.projects,
       '/stack': tr.nav.tech,
+      '/blog': tr.nav.blog,
       '/contact': tr.nav.contact,
     }
     const base = lang === 'fr'
@@ -57,6 +59,7 @@ export default function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/stack" element={<Stack />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

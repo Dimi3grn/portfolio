@@ -4,13 +4,14 @@ import { useLang } from '../../context/LangContext'
 import { TransitionLink } from '../PageTransition/PageTransition'
 import styles from './Header.module.css'
 
-type NavKey = 'about' | 'experience' | 'projects' | 'tech' | 'contact'
+type NavKey = 'about' | 'experience' | 'projects' | 'tech' | 'blog' | 'contact'
 
 const NAV_ITEMS: { key: NavKey; path: string }[] = [
   { key: 'about', path: '/about' },
   { key: 'experience', path: '/experience' },
   { key: 'projects', path: '/projects' },
   { key: 'tech', path: '/stack' },
+  { key: 'blog', path: '/blog' },
   { key: 'contact', path: '/contact' },
 ]
 

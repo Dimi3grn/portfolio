@@ -41,7 +41,7 @@ export default function Projects() {
   return (
     <div className="page">
       <BlueprintBackground />
-      <div className="page-corner">03 / 05</div>
+      <div className="page-corner">03 / 06</div>
 
       <div className={styles.inner}>
         <span className="eyebrow">03</span>

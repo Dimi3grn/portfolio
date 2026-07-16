@@ -78,7 +78,7 @@ export default function Stack() {
   return (
     <div className="page">
       <BlueprintBackground />
-      <div className="page-corner">04 / 05</div>
+      <div className="page-corner">04 / 06</div>
 
       <div className={styles.inner}>
         <span className="eyebrow">04</span>
@@ -130,8 +130,8 @@ export default function Stack() {
           <PageFooterNav
             prevTo="/projects"
             prevLabel={tr.nav.projects}
-            nextTo="/contact"
-            nextLabel={tr.nav.contact}
+            nextTo="/blog"
+            nextLabel={tr.nav.blog}
           />
         </div>
       </div>

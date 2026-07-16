@@ -42,8 +42,10 @@ function useRouteStamp(to: string | null) {
       return { num: '03', name: tr.nav.projects }
     case '/stack':
       return { num: '04', name: tr.nav.tech }
+    case '/blog':
+      return { num: '05', name: tr.nav.blog }
     case '/contact':
-      return { num: '05', name: tr.nav.contact }
+      return { num: '06', name: tr.nav.contact }
     case '/':
       return { num: '00', name: lang === 'fr' ? 'Accueil' : 'Home' }
     default:
