@@ -36,8 +36,8 @@ function PageMeta() {
       '/contact': tr.nav.contact,
     }
     const base = lang === 'fr'
-      ? 'Dimitri Gourrin — Développeur Fullstack'
-      : 'Dimitri Gourrin — Fullstack Developer'
+      ? 'Dimitri Gourrin — Développeur Fullstack & DevOps'
+      : 'Dimitri Gourrin — Fullstack & DevOps Developer'
     const section = sections[pathname]
     document.title = section ? `${section} — Dimitri Gourrin` : base
   }, [pathname, lang, tr])
