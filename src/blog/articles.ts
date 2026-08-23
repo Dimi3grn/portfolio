@@ -44,11 +44,11 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
     { type: 'h2', text: 'La structure' },
     {
       type: 'todo',
-      text: 'Décrire l\'entreprise avec tes mots (le guide interdit le copier-coller de brochure) : nom ou activité de l\'indépendant, localisation, depuis quand il exerce, pour quels types de clients, pourquoi tu as choisi ce stage.',
+      text: 'Décrire l\'entreprise avec tes mots (le guide interdit le copier-coller de brochure) : activité de l\'indépendant, localisation, en quoi consiste son infrastructure réseau, pourquoi tu as choisi ce stage.',
     },
     {
       type: 'p',
-      text: 'Stage de fin de Bachelor 2, effectué de mai à juillet 2026 auprès d\'un professionnel indépendant spécialisé en infrastructure et réseau. Une structure de cette taille implique un périmètre large : sur une même période, les missions couvrent l\'administration de services réseau, le développement web et les pratiques DevOps.',
+      text: 'Stage de fin de Bachelor 2, effectué de mai à juillet 2026 auprès d\'un professionnel indépendant disposant de sa propre infrastructure réseau. Une structure de cette taille implique un périmètre large : sur une même période, les missions couvrent l\'administration de cette infrastructure, le développement web et les pratiques DevOps.',
     },
     { type: 'h2', text: 'L\'environnement de travail' },
     {
@@ -57,7 +57,7 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
     },
     {
       type: 'p',
-      text: 'Environnement technique : parc de machines Linux, services réseau auto-hébergés (DNS, DHCP, VPN), supervision, et applications web en production pour des clients. Chaque intervention a un impact réel, ce qui impose une méthode : sauvegarde préalable, fenêtre d\'intervention, plan de retour arrière.',
+      text: 'Environnement technique : une infrastructure réseau en propre - machines Linux, services auto-hébergés (DNS, DHCP, VPN), supervision - et le site web de l\'activité. L\'ensemble est utilisé au quotidien : chaque intervention a un impact réel, ce qui impose une méthode - sauvegarde préalable, fenêtre d\'intervention, plan de retour arrière.',
     },
     { type: 'h2', text: 'Mes missions' },
     {
@@ -252,7 +252,7 @@ export const articles: BlogArticle[] = [
       { type: 'h2', text: 'Difficulté nº1 - Intervenir sur un environnement de production' },
       {
         type: 'p',
-        text: 'Un environnement utilisé par des clients interdit l\'expérimentation directe. Solution adoptée : reproduire d\'abord en local ou sur une machine de test, préparer un plan de retour arrière, puis intervenir sur un créneau défini. Le rythme est plus lent ; la fiabilité prime.',
+        text: 'L\'infrastructure et le site sont utilisés au quotidien : pas d\'expérimentation directe possible. Solution adoptée : reproduire d\'abord en local ou sur une machine de test, préparer un plan de retour arrière, puis intervenir sur un créneau défini. Le rythme est plus lent ; la fiabilité prime.',
       },
       { type: 'h2', text: 'Difficulté nº2 - Reprendre du code existant' },
       {
@@ -386,7 +386,7 @@ export const articles: BlogArticle[] = [
       { type: 'h2', text: 'Mes suggestions' },
       {
         type: 'p',
-        text: 'Si la mission se poursuivait, trois chantiers dans la continuité directe de ce qui a été livré : généraliser l\'IaC avec Ansible pour rendre les serveurs reproductibles, étendre la supervision aux applications clientes (et pas seulement aux services réseau), et centraliser les procédures d\'intervention dans un wiki unique.',
+        text: 'Si la mission se poursuivait, trois chantiers dans la continuité directe de ce qui a été livré : généraliser l\'IaC avec Ansible pour rendre les serveurs reproductibles, étendre la supervision au site web (et pas seulement aux services réseau), et centraliser les procédures d\'intervention dans un wiki unique.',
       },
       { type: 'h2', text: 'Et maintenant' },
       {
