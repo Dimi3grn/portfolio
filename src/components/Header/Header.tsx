@@ -20,7 +20,10 @@ export default function Header() {
   const { pathname } = useLocation()
   const [hovered, setHovered] = useState(false)
 
-  const activeKey = NAV_ITEMS.find(item => item.path === pathname)?.key ?? null
+  const activeKey =
+    NAV_ITEMS.find(
+      item => item.path === pathname || pathname.startsWith(`${item.path}/`),
+    )?.key ?? null
   const sectionLabel = activeKey ? tr.nav[activeKey] : ''
   // on the landing the nav is permanently visible (no hover-reveal)
   const isLanding = pathname === '/'

@@ -33,6 +33,9 @@ function useTransition() {
 /** num + label shown on the covering panel, per destination route */
 function useRouteStamp(to: string | null) {
   const { tr, lang } = useLang()
+  if (to && to.startsWith('/blog')) {
+    return { num: '05', name: tr.nav.blog }
+  }
   switch (to) {
     case '/about':
       return { num: '01', name: tr.nav.about }

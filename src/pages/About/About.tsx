@@ -25,6 +25,16 @@ export default function About() {
                 {fact}
               </li>
             ))}
+            <li className={styles.factLink}>
+              <span className={styles.factDot} />
+              <a
+                href="https://linkedin.com/in/d-gourrin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                linkedin.com/in/d-gourrin ↗
+              </a>
+            </li>
           </ul>
         </div>
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="'IBM Plex Mono', Consolas, monospace">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="rgba(122,46,46,0.07)" stroke-width="1"/>
+    </pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#7a2e2e" fill-opacity="0.6"/>
+    </marker>
+  </defs>
+  <rect width="800" height="300" fill="#f7f5f0"/>
+  <rect width="800" height="300" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="799" height="299" fill="none" stroke="#e3ded1"/>
+
+  <!-- Client -->
+  <rect x="40" y="110" width="150" height="60" rx="10" fill="#ffffff" stroke="#7a2e2e" stroke-width="1.25"/>
+  <text x="115" y="136" text-anchor="middle" font-size="12" fill="#1a1815">CLIENT</text>
+  <text x="115" y="154" text-anchor="middle" font-size="10" fill="#8a8375">app.exemple.lan ?</text>
+
+  <!-- Resolver -->
+  <rect x="320" y="110" width="160" height="60" rx="10" fill="#ffffff" stroke="#7a2e2e" stroke-width="1.25"/>
+  <text x="400" y="136" text-anchor="middle" font-size="12" fill="#1a1815">RÉSOLVEUR</text>
+  <text x="400" y="154" text-anchor="middle" font-size="10" fill="#8a8375">cache local</text>
+
+  <!-- Authoritative -->
+  <rect x="610" y="110" width="150" height="60" rx="10" fill="#ffffff" stroke="#7a2e2e" stroke-width="1.25"/>
+  <text x="685" y="136" text-anchor="middle" font-size="12" fill="#1a1815">AUTORITAIRE</text>
+  <text x="685" y="154" text-anchor="middle" font-size="10" fill="#8a8375">zone exemple.lan</text>
+
+  <!-- arrows -->
+  <line x1="190" y1="128" x2="312" y2="128" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25" marker-end="url(#arr)"/>
+  <text x="251" y="118" text-anchor="middle" font-size="10" fill="#7a2e2e">1 · requête</text>
+  <line x1="312" y1="152" x2="190" y2="152" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25" marker-end="url(#arr)"/>
+  <text x="251" y="174" text-anchor="middle" font-size="10" fill="#544e42">4 · réponse (mise en cache)</text>
+
+  <line x1="480" y1="128" x2="602" y2="128" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25" marker-end="url(#arr)"/>
+  <text x="541" y="118" text-anchor="middle" font-size="10" fill="#7a2e2e">2 · si absent du cache</text>
+  <line x1="602" y1="152" x2="480" y2="152" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25" marker-end="url(#arr)"/>
+  <text x="541" y="174" text-anchor="middle" font-size="10" fill="#544e42">3 · enregistrement + TTL</text>
+
+  <!-- TTL note -->
+  <rect x="285" y="216" width="230" height="52" rx="8" fill="none" stroke="#a5514c" stroke-dasharray="5 4"/>
+  <circle cx="305" cy="242" r="4" fill="#a5514c"/>
+  <text x="318" y="238" font-size="10" fill="#7a2e2e">TTL : durée de vie du cache.</text>
+  <text x="318" y="256" font-size="10" fill="#544e42">Une erreur publiée persiste ce temps-là.</text>
+
+  <text x="16" y="288" font-size="10" letter-spacing="1" fill="#a89f8c">FIG. 02 - RÉSOLUTION DNS ET CACHES</text>
+</svg>

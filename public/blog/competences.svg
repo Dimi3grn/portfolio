@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'IBM Plex Mono', Consolas, monospace">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="rgba(122,46,46,0.07)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="340" fill="#f7f5f0"/>
+  <rect width="800" height="340" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="799" height="339" fill="none" stroke="#e3ded1"/>
+
+  <text x="400" y="40" text-anchor="middle" font-size="12" letter-spacing="3" fill="#7a2e2e">COMPÉTENCE = SAVOIR + SAVOIR-FAIRE + SAVOIR-ÊTRE</text>
+
+  <!-- Savoir -->
+  <rect x="46" y="70" width="220" height="200" rx="12" fill="#ffffff" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25"/>
+  <text x="156" y="98" text-anchor="middle" font-size="12" fill="#7a2e2e">SAVOIR</text>
+  <line x1="76" y1="112" x2="236" y2="112" stroke="#e3ded1"/>
+  <text x="66" y="138" font-size="10" fill="#544e42">· protocoles réseau</text>
+  <text x="66" y="160" font-size="10" fill="#544e42">  (DNS, DHCP, VPN)</text>
+  <text x="66" y="182" font-size="10" fill="#544e42">· principes Docker / IaC</text>
+  <text x="66" y="204" font-size="10" fill="#544e42">· qualité logicielle</text>
+  <text x="66" y="238" font-size="9" fill="#8a8375">acquis : cours Ynov,</text>
+  <text x="66" y="252" font-size="9" fill="#8a8375">consolidé en stage</text>
+
+  <!-- Savoir-faire -->
+  <rect x="290" y="70" width="220" height="200" rx="12" fill="#ffffff" stroke="#7a2e2e" stroke-width="1.5"/>
+  <text x="400" y="98" text-anchor="middle" font-size="12" fill="#7a2e2e">SAVOIR-FAIRE</text>
+  <line x1="320" y1="112" x2="480" y2="112" stroke="#e3ded1"/>
+  <text x="310" y="138" font-size="10" fill="#544e42">· cartographier un parc</text>
+  <text x="310" y="160" font-size="10" fill="#544e42">· administrer DNS/DHCP/VPN</text>
+  <text x="310" y="182" font-size="10" fill="#544e42">· conteneuriser + CI/CD</text>
+  <text x="310" y="204" font-size="10" fill="#544e42">· refactorer sans casser</text>
+  <text x="310" y="238" font-size="9" fill="#8a8375">acquis : missions</text>
+  <text x="310" y="252" font-size="9" fill="#8a8375">du stage 2026</text>
+
+  <!-- Savoir-être -->
+  <rect x="534" y="70" width="220" height="200" rx="12" fill="#ffffff" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25"/>
+  <text x="644" y="98" text-anchor="middle" font-size="12" fill="#7a2e2e">SAVOIR-ÊTRE</text>
+  <line x1="564" y1="112" x2="724" y2="112" stroke="#e3ded1"/>
+  <text x="554" y="138" font-size="10" fill="#544e42">· prudence en production</text>
+  <text x="554" y="160" font-size="10" fill="#544e42">· autonomie d'apprentissage</text>
+  <text x="554" y="182" font-size="10" fill="#544e42">· communication tuteur</text>
+  <text x="554" y="204" font-size="10" fill="#544e42">· rigueur documentaire</text>
+  <text x="554" y="238" font-size="9" fill="#8a8375">développés au contact</text>
+  <text x="554" y="252" font-size="9" fill="#8a8375">du terrain</text>
+
+  <!-- braces to bottom -->
+  <path d="M156 270 V290 H400 M400 270 V290 M644 270 V290 H400 M400 290 V304" fill="none" stroke="#7a2e2e" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="400" cy="308" r="4" fill="#a5514c"/>
+  <text x="400" y="328" text-anchor="middle" font-size="10" fill="#544e42">« je suis capable de … » - preuves dans les projets et articles de ce blog</text>
+
+  <text x="16" y="328" font-size="10" letter-spacing="1" fill="#a89f8c">FIG. 04</text>
+</svg>

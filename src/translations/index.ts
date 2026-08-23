@@ -78,8 +78,13 @@ export interface TrSchema {
   }
   blog: {
     title: string
-    wip_title: string
-    wip_body: string
+    intro: string
+    /** affiché uniquement en EN : les articles sont rédigés en français */
+    fr_note: string
+    company_eyebrow: string
+    read_more: string
+    back_to_list: string
+    reading_time_suffix: string
   }
   contact: {
     title: string
@@ -236,8 +241,12 @@ export const t: Record<Lang, TrSchema> = {
     },
     blog: {
       title: 'Blog',
-      wip_title: 'En cours de rédaction',
-      wip_body: 'Les premiers articles arrivent bientôt - retours d\'expérience, notes techniques et coulisses de mes projets.',
+      intro: 'Journal de bord de mon stage 2026 et de ma veille technique : réseau, DevOps et retours d\'expérience.',
+      fr_note: '',
+      company_eyebrow: 'Contexte du stage',
+      read_more: 'Lire l\'article',
+      back_to_list: 'Tous les articles',
+      reading_time_suffix: 'de lecture',
     },
     contact: {
       title: 'Contact',
@@ -393,8 +402,12 @@ export const t: Record<Lang, TrSchema> = {
     },
     blog: {
       title: 'Blog',
-      wip_title: 'Currently being written',
-      wip_body: 'First articles coming soon - hands-on write-ups, technical notes and behind-the-scenes of my projects.',
+      intro: 'Logbook of my 2026 internship and technical watch: networking, DevOps and hands-on write-ups.',
+      fr_note: 'Articles are written in French (school requirement).',
+      company_eyebrow: 'Internship context',
+      read_more: 'Read the article',
+      back_to_list: 'All articles',
+      reading_time_suffix: 'read',
     },
     contact: {
       title: 'Contact',

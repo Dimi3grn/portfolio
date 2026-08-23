@@ -9,6 +9,7 @@ import Experience from './pages/Experience/Experience'
 import Projects from './pages/Projects/Projects'
 import Stack from './pages/Stack/Stack'
 import Blog from './pages/Blog/Blog'
+import BlogArticle from './pages/Blog/BlogArticle'
 import Contact from './pages/Contact/Contact'
 import NotFound from './pages/NotFound/NotFound'
 
@@ -27,6 +28,8 @@ function PageMeta() {
 
   useEffect(() => {
     document.documentElement.lang = lang
+    // les pages article gèrent leur propre <title>
+    if (pathname.startsWith('/blog/')) return
     const sections: Record<string, string> = {
       '/about': tr.nav.about,
       '/experience': tr.experience.title,
@@ -60,6 +63,7 @@ export default function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/stack" element={<Stack />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogArticle />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

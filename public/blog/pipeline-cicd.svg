@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'IBM Plex Mono', Consolas, monospace">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="rgba(122,46,46,0.07)" stroke-width="1"/>
+    </pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#7a2e2e" fill-opacity="0.6"/>
+    </marker>
+  </defs>
+  <rect width="800" height="320" fill="#f7f5f0"/>
+  <rect width="800" height="320" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="799" height="319" fill="none" stroke="#e3ded1"/>
+
+  <!-- Dev push -->
+  <rect x="36" y="80" width="120" height="56" rx="10" fill="#ffffff" stroke="#7a2e2e" stroke-width="1.25"/>
+  <text x="96" y="104" text-anchor="middle" font-size="12" fill="#1a1815">DEV</text>
+  <text x="96" y="122" text-anchor="middle" font-size="10" fill="#8a8375">git push</text>
+
+  <line x1="156" y1="108" x2="206" y2="108" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25" marker-end="url(#arr)"/>
+
+  <!-- GitHub Actions box -->
+  <rect x="214" y="44" width="330" height="130" rx="12" fill="none" stroke="#7a2e2e" stroke-opacity="0.5" stroke-width="1.25" stroke-dasharray="6 4"/>
+  <text x="230" y="66" font-size="10" letter-spacing="2" fill="#7a2e2e">GITHUB ACTIONS</text>
+
+  <rect x="234" y="82" width="86" height="50" rx="8" fill="#ffffff" stroke="#e3ded1"/>
+  <text x="277" y="103" text-anchor="middle" font-size="11" fill="#1a1815">LINT</text>
+  <text x="277" y="119" text-anchor="middle" font-size="9" fill="#8a8375">qualité</text>
+
+  <line x1="320" y1="107" x2="336" y2="107" stroke="#7a2e2e" stroke-opacity="0.5" stroke-width="1" marker-end="url(#arr)"/>
+
+  <rect x="340" y="82" width="86" height="50" rx="8" fill="#ffffff" stroke="#e3ded1"/>
+  <text x="383" y="103" text-anchor="middle" font-size="11" fill="#1a1815">TESTS</text>
+  <text x="383" y="119" text-anchor="middle" font-size="9" fill="#8a8375">unitaires</text>
+
+  <line x1="426" y1="107" x2="442" y2="107" stroke="#7a2e2e" stroke-opacity="0.5" stroke-width="1" marker-end="url(#arr)"/>
+
+  <rect x="446" y="82" width="86" height="50" rx="8" fill="#ffffff" stroke="#e3ded1"/>
+  <text x="489" y="103" text-anchor="middle" font-size="11" fill="#1a1815">BUILD</text>
+  <text x="489" y="119" text-anchor="middle" font-size="9" fill="#8a8375">image</text>
+
+  <line x1="544" y1="108" x2="596" y2="108" stroke="#7a2e2e" stroke-opacity="0.6" stroke-width="1.25" marker-end="url(#arr)"/>
+
+  <!-- Registry / image -->
+  <rect x="604" y="80" width="160" height="56" rx="10" fill="#ffffff" stroke="#7a2e2e" stroke-width="1.25"/>
+  <text x="684" y="104" text-anchor="middle" font-size="12" fill="#1a1815">IMAGE DOCKER</text>
+  <text x="684" y="122" text-anchor="middle" font-size="10" fill="#8a8375">taguée · versionnée</text>
+
+  <!-- Deploy -->
+  <path d="M684 136 V196 H460 V226" fill="none" stroke="#7a2e2e" stroke-opacity="0.5" stroke-width="1.25" marker-end="url(#arr)"/>
+  <rect x="330" y="226" width="260" height="60" rx="10" fill="#ffffff" stroke="#a5514c" stroke-width="1.5"/>
+  <circle cx="352" cy="256" r="4" fill="#a5514c"/>
+  <text x="366" y="250" font-size="11" fill="#7a2e2e">SERVEUR · docker compose up -d</text>
+  <text x="366" y="268" font-size="10" fill="#8a8375">déploiement reproductible</text>
+
+  <!-- fail feedback -->
+  <path d="M383 132 C383 176 250 180 166 136" fill="none" stroke="#a5514c" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="2 4" marker-end="url(#arr)"/>
+  <text x="235" y="180" font-size="9" fill="#a5514c">échec → retour au dev</text>
+
+  <text x="16" y="306" font-size="10" letter-spacing="1" fill="#a89f8c">FIG. 03 - PIPELINE CI/CD : DU PUSH AU DÉPLOIEMENT</text>
+</svg>
