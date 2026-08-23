@@ -103,7 +103,7 @@ export const t: Record<Lang, TrSchema> = {
     hero: {
       tag: 'Étudiant · Développeur Fullstack & DevOps',
       name: 'Dimitri Gourrin',
-      tagline: 'Passionné par les architectures performantes (Go, Java, C#) et les pratiques DevOps, je conçois des applications complètes - du backend à l\'interface - avec rigueur et autonomie.',
+      tagline: 'Architectures performantes (Go, Java, C#) et pratiques DevOps : je conçois des applications complètes - du backend à l\'interface - avec rigueur et autonomie.',
       alternance: 'En recherche d\'alternance · dès septembre 2026 · Rythme : 2 sem. entreprise / 1 sem. cours',
       cta_projects: 'Voir mes projets',
       cta_cv: 'Télécharger mon CV',
@@ -111,7 +111,7 @@ export const t: Record<Lang, TrSchema> = {
     },
     about: {
       title: 'À propos',
-      body: 'Développeur Fullstack en Bachelor 3 Informatique à Ynov Aix, passionné par les architectures performantes (Go, Java, C#) et les pratiques DevOps. Je construis des applications complètes - de la base de données à l\'interface - avec une attention particulière aux fondations solides et au code maintenable. L\'infrastructure et les réseaux font pleinement partie de ma pratique : conteneurisation, CI/CD, administration système - une dimension que je considère nécessaire pour concevoir des systèmes qui fonctionnent vraiment en production. Trilingue, je combine rigueur technique et autonomie pour concevoir des solutions scalables. Je recherche activement une alternance dès septembre 2026 pour continuer à progresser dans un environnement professionnel.',
+      body: 'Développeur Fullstack en Bachelor 3 Informatique à Ynov Aix, orienté architectures performantes (Go, Java, C#) et pratiques DevOps. Je construis des applications complètes - de la base de données à l\'interface - avec une attention particulière aux fondations solides et au code maintenable. L\'infrastructure et les réseaux font pleinement partie de ma pratique : conteneurisation, CI/CD, administration système - une dimension que je considère nécessaire pour concevoir des systèmes qui fonctionnent vraiment en production. Trilingue, je combine rigueur technique et autonomie pour concevoir des solutions scalables. Je recherche activement une alternance dès septembre 2026 pour continuer à progresser dans un environnement professionnel.',
       facts: ['Ynov Campus · Aix-en-Provence', 'Mobilité : Aix-en-Provence / Marseille', 'Anglais C1 · Russe natif · Italien (notions)'],
     },
     experience: {
@@ -260,7 +260,7 @@ export const t: Record<Lang, TrSchema> = {
     hero: {
       tag: 'Student · Fullstack & DevOps Developer',
       name: 'Dimitri Gourrin',
-      tagline: 'Passionate about performant architectures (Go, Java, C#) and DevOps practices, I build complete applications - from backend to interface - with rigor and autonomy.',
+      tagline: 'Performant architectures (Go, Java, C#) and DevOps practices: I build complete applications - from backend to interface - with rigor and autonomy.',
       alternance: 'Looking for a work-study position · from September 2026 · Rhythm: 2 weeks company / 1 week school',
       cta_projects: 'See my work',
       cta_cv: 'Download CV',
@@ -268,7 +268,7 @@ export const t: Record<Lang, TrSchema> = {
     },
     about: {
       title: 'About',
-      body: 'Fullstack developer in the 3rd year of the Computer Science Bachelor at Ynov Aix, passionate about performant architectures (Go, Java, C#) and DevOps practices. I build complete applications - from database to user interface - with close attention to solid foundations and maintainable code. Infrastructure and networking are a full part of my practice: containerization, CI/CD, system administration - a dimension I consider necessary to build systems that actually work in production. Trilingual, I combine technical rigor and autonomy to design scalable solutions. I\'m actively looking for a work-study position starting September 2026 to keep growing in a professional environment.',
+      body: 'Fullstack developer in the 3rd year of the Computer Science Bachelor at Ynov Aix, focused on performant architectures (Go, Java, C#) and DevOps practices. I build complete applications - from database to user interface - with close attention to solid foundations and maintainable code. Infrastructure and networking are a full part of my practice: containerization, CI/CD, system administration - a dimension I consider necessary to build systems that actually work in production. Trilingual, I combine technical rigor and autonomy to design scalable solutions. I\'m actively looking for a work-study position starting September 2026 to keep growing in a professional environment.',
       facts: ['Ynov Campus · Aix-en-Provence', 'Mobility: Aix-en-Provence / Marseille', 'English C1 · Russian native · Italian (basics)'],
     },
     experience: {
