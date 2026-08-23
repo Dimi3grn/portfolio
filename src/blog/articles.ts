@@ -1,11 +1,13 @@
 /**
- * Contenu du blog de stage (rendu Ynov B2 — noté selon la grille du
+ * Contenu du blog de stage (rendu Ynov B2 - noté selon la grille du
  * « Guide du Blog - Portfolio »). Les articles sont rédigés en français
  * (exigence du barème) ; le toggle EN affiche la même version.
  *
+ * Ton éditorial : clair, concis, direct, professionnel - pas de narration.
+ *
  * Les sections `todo` sont des blocs « à compléter » : des faits personnels
  * (entreprise réelle, anecdotes, ressenti) que seul l'auteur peut écrire.
- * Elles sont visibles en jaune tant qu'elles existent — le blog ne doit pas
+ * Elles sont visibles en jaune tant qu'elles existent - le blog ne doit pas
  * être mis en production avant de les avoir remplacées.
  */
 
@@ -31,13 +33,13 @@ export interface BlogArticle {
   sections: ArticleSection[]
 }
 
-/** Page « Contexte & entreprise » — élément imposé par le guide, hors articles. */
+/** Page « Contexte & entreprise » - élément imposé par le guide, hors articles. */
 export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'> = {
   slug: 'entreprise',
   title: 'Contexte du stage - l\'entreprise',
   tags: ['Stage 2026', 'Infrastructure & Réseau'],
   excerpt:
-    'Où j\'ai effectué mon stage de fin de Bachelor 2 : présentation de la structure, de son activité et de l\'environnement de travail dans lequel j\'ai évolué de mai à juillet 2026.',
+    'Présentation de la structure d\'accueil du stage (mai - juillet 2026) : activité, environnement de travail et missions confiées.',
   sections: [
     { type: 'h2', text: 'La structure' },
     {
@@ -46,7 +48,7 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
     },
     {
       type: 'p',
-      text: 'J\'ai effectué mon stage de fin d\'année (mai - juillet 2026) auprès d\'un professionnel indépendant spécialisé en infrastructure et réseau. Travailler dans une petite structure a un avantage énorme pour un stagiaire : on voit tout. Il n\'y a pas de service cloisonné - la même semaine peut passer de l\'administration d\'un serveur DNS à une session de refactoring sur une application web cliente.',
+      text: 'Stage de fin de Bachelor 2, effectué de mai à juillet 2026 auprès d\'un professionnel indépendant spécialisé en infrastructure et réseau. Une structure de cette taille implique un périmètre large : sur une même période, les missions couvrent l\'administration de services réseau, le développement web et les pratiques DevOps.',
     },
     { type: 'h2', text: 'L\'environnement de travail' },
     {
@@ -55,7 +57,7 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
     },
     {
       type: 'p',
-      text: 'L\'environnement technique, lui, était riche : parc de machines sous Linux, services réseau auto-hébergés (DNS, DHCP, VPN), supervision, et des projets web en production pour des clients. C\'est un contexte où chaque manipulation a des conséquences réelles - un enseignement en soi, que je détaille dans les articles de ce blog.',
+      text: 'Environnement technique : parc de machines Linux, services réseau auto-hébergés (DNS, DHCP, VPN), supervision, et applications web en production pour des clients. Chaque intervention a un impact réel, ce qui impose une méthode : sauvegarde préalable, fenêtre d\'intervention, plan de retour arrière.',
     },
     { type: 'h2', text: 'Mes missions' },
     {
@@ -68,7 +70,7 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
     },
     {
       type: 'p',
-      text: 'Les articles qui suivent racontent ces missions dans l\'ordre où je les ai vécues : l\'intégration, le réseau, la conteneurisation et l\'automatisation, les difficultés rencontrées en chemin, et le bilan que j\'en tire.',
+      text: 'Les articles de ce blog documentent ces missions : intégration, administration réseau, conteneurisation et automatisation, difficultés rencontrées, puis bilan.',
     },
   ],
 }
@@ -76,26 +78,26 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
 export const articles: BlogArticle[] = [
   {
     slug: 'integration-stage-infrastructure',
-    title: 'Premiers jours en infrastructure : mon intégration',
+    title: 'Intégration : première semaine et cartographie du réseau',
     date: '2026-06-05',
     dateLabel: '5 juin 2026',
     tags: ['Stage 2026', 'Intégration'],
     excerpt:
-      'Arriver en stage dans une structure d\'infrastructure quand on vient du développement : ce que j\'ai découvert la première semaine, et comment je me suis organisé pour être utile rapidement.',
+      'Prise en main de l\'environnement, cartographie du parc et méthode de travail mise en place pour être opérationnel rapidement.',
     readingTime: '4 min',
     sections: [
       {
         type: 'p',
-        text: 'Je suis arrivé en stage avec un profil orienté développement - Go, Java, React - et une curiosité réelle mais encore théorique pour l\'infrastructure. La première semaine a immédiatement remis les choses dans l\'ordre : avant de toucher à quoi que ce soit, il faut comprendre ce qui existe.',
+        text: 'Profil au départ du stage : développement (Go, Java, React), connaissances d\'infrastructure encore théoriques. Premier objectif fixé avec le tuteur : comprendre l\'existant avant toute intervention.',
       },
       {
         type: 'todo',
         text: 'Raconter ton vrai premier jour : accueil, présentation du parc, première tâche confiée. Une anecdote concrète (même petite) rend l\'article vivant.',
       },
-      { type: 'h2', text: 'Comprendre avant d\'agir : la cartographie' },
+      { type: 'h2', text: 'Première mission : cartographier le réseau' },
       {
         type: 'p',
-        text: 'Ma première vraie mission a été de cartographier le réseau : lister les machines, les services qui tournent dessus, les adresses, les dépendances entre eux. C\'est un exercice moins passif qu\'il n\'y paraît - pour documenter un service, il faut comprendre son rôle, et poser des questions oblige à s\'intégrer.',
+        text: 'La première mission a consisté à cartographier le réseau : inventaire des machines, services hébergés, adressage, dépendances entre services. L\'exercice impose de comprendre le rôle de chaque élément et génère des échanges réguliers avec le tuteur - efficace pour s\'intégrer et apprendre l\'environnement.',
       },
       {
         type: 'img',
@@ -105,12 +107,12 @@ export const articles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Cette cartographie est devenue mon document de référence pour tout le stage. Elle a aussi été ma meilleure carte de visite : présenter au tuteur un schéma clair de son propre réseau, c\'est prouver qu\'on a compris l\'environnement dans lequel on met les pieds.',
+        text: 'Cette cartographie a servi de document de référence pendant toute la durée du stage : préparation des interventions, localisation rapide d\'un service, support de discussion avec le tuteur.',
       },
       { type: 'h2', text: 'Le lien avec la formation' },
       {
         type: 'p',
-        text: 'Les cours de réseau et d\'administration système de Bachelor à Ynov m\'ont donné le vocabulaire - sous-réseaux, VLAN, baux DHCP, zones DNS. Ce que le stage a ajouté, c\'est la dimension production : un service mal documenté est un service qu\'on n\'ose pas toucher, et une modification se prépare (sauvegarde, fenêtre d\'intervention, retour arrière possible).',
+        text: 'Les cours de réseau et d\'administration système d\'Ynov ont fourni les bases : sous-réseaux, VLAN, baux DHCP, zones DNS. Le stage a ajouté les contraintes de production : documentation systématique, modifications préparées à l\'avance, retour arrière toujours possible.',
       },
       {
         type: 'ul',
@@ -122,29 +124,29 @@ export const articles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Les prochains articles entrent dans le concret des missions : d\'abord l\'administration des services réseau, puis la partie conteneurisation et automatisation.',
+        text: 'Les articles suivants détaillent les missions : administration des services réseau, puis conteneurisation et automatisation.',
       },
     ],
   },
 
   {
     slug: 'dns-dhcp-vpn-administration',
-    title: 'DNS, DHCP, VPN : administrer les services qui font tenir un réseau',
+    title: 'DNS, DHCP, VPN : administration des services réseau en production',
     date: '2026-06-19',
     dateLabel: '19 juin 2026',
     tags: ['Réseau', 'DNS', 'Supervision'],
     excerpt:
-      'Trois services invisibles quand tout va bien, critiques quand ça casse. Ce que l\'administration quotidienne de DNS, DHCP et VPN m\'a appris - et pourquoi la supervision change tout.',
+      'Administration de trois services critiques sur un environnement de production : opérations réalisées, précautions adoptées et apport de la supervision.',
     readingTime: '6 min',
     sections: [
       {
         type: 'p',
-        text: 'Si le réseau était une ville, le DHCP distribuerait les adresses postales, le DNS serait l\'annuaire, et le VPN le tunnel sécurisé pour y entrer depuis l\'extérieur. Pendant mon stage, j\'ai eu la responsabilité (encadrée) de faire vivre ces trois services : créer des enregistrements, gérer des réservations, ouvrir des accès.',
+        text: 'Pendant le stage, j\'ai administré - sous encadrement - trois services centraux du réseau : le DNS (résolution de noms), le DHCP (attribution d\'adresses) et le VPN (accès distants). Opérations réalisées : création et modification d\'enregistrements, gestion de plages et de réservations, ouverture d\'accès.',
       },
-      { type: 'h2', text: 'Le DNS, ou l\'art de ne rien casser' },
+      { type: 'h2', text: 'DNS : des modifications qui engagent' },
       {
         type: 'p',
-        text: 'La leçon la plus marquante : la moindre modification DNS se propage, se met en cache, et une erreur peut rendre un service injoignable pendant des heures. J\'ai appris à raisonner en TTL, à préparer mes modifications à l\'avance, et à vérifier systématiquement la résolution après chaque changement.',
+        text: 'Une modification DNS se propage et se met en cache : une erreur publiée peut rendre un service injoignable pendant toute la durée du TTL. Méthode adoptée : préparer chaque modification, abaisser le TTL avant un changement sensible, vérifier la résolution immédiatement après application.',
       },
       {
         type: 'img',
@@ -157,10 +159,10 @@ export const articles: BlogArticle[] = [
         lang: 'bash',
         text: '# vérifier la résolution après une modification de zone\ndig app.exemple.lan @serveur-dns +short\n\n# suivre un bail DHCP attribué à un poste\njournalctl -u isc-dhcp-server | grep "DHCPACK"',
       },
-      { type: 'h2', text: 'Supervision : voir les problèmes avant les utilisateurs' },
+      { type: 'h2', text: 'Supervision : détecter avant les utilisateurs' },
       {
         type: 'p',
-        text: 'La deuxième partie de la mission consistait à surveiller ces services : disponibilité, espace disque, certificats. Mettre en place une supervision, c\'est transformer le métier - on passe de « réparer quand quelqu\'un se plaint » à « intervenir avant que ça se voie ». C\'est aussi ce qui m\'a fait comprendre pourquoi les entreprises investissent autant dans l\'observabilité.',
+        text: 'Second volet de la mission : la surveillance de ces services (disponibilité, espace disque, certificats). Avec une supervision en place, les incidents sont détectés par des alertes plutôt que signalés par les utilisateurs, et les interventions deviennent planifiables. C\'est un changement de fonctionnement mesurable, pas un confort.',
       },
       {
         type: 'todo',
@@ -177,39 +179,39 @@ export const articles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Cette mission a confirmé une intuition que j\'avais depuis les cours d\'infrastructure : un développeur qui comprend le réseau sur lequel tourne son application prend de meilleures décisions. C\'est exactement la passerelle qu\'explore l\'article suivant, côté DevOps.',
+        text: 'Ce volet réseau complète directement mon profil de développeur : connaître l\'environnement d\'exécution permet de concevoir de meilleures applications. La suite - conteneurisation et CI/CD - fait l\'objet de l\'article suivant.',
       },
     ],
   },
 
   {
     slug: 'docker-compose-cicd-github-actions',
-    title: 'Du code au conteneur : Docker, Compose et un pipeline CI/CD',
+    title: 'Docker, Compose et CI/CD : conteneuriser puis automatiser',
     date: '2026-07-03',
     dateLabel: '3 juillet 2026',
     tags: ['DevOps', 'Docker', 'CI/CD'],
     excerpt:
-      'Conteneuriser une application existante puis automatiser ses tests et son déploiement avec GitHub Actions : la mission qui a fait le pont entre ma formation de développeur et l\'infrastructure.',
+      'Conteneurisation d\'applications existantes avec Docker/Compose et mise en place d\'un pipeline GitHub Actions : périmètre, choix techniques et lien direct avec la formation.',
     readingTime: '6 min',
     sections: [
       {
         type: 'p',
-        text: '« Ça marche sur ma machine » - la phrase interdite. Une partie de mon stage a consisté à conteneuriser des applications avec Docker et Docker Compose, puis à mettre en place un pipeline d\'intégration continue avec GitHub Actions. C\'est la mission où formation et stage se sont le plus directement répondu.',
+        text: 'Mission DevOps du stage : conteneuriser des applications existantes avec Docker et Docker Compose, puis automatiser la vérification et le build avec un pipeline GitHub Actions.',
       },
-      { type: 'h2', text: 'Conteneuriser : rendre l\'environnement reproductible' },
+      { type: 'h2', text: 'Conteneuriser : expliciter l\'environnement' },
       {
         type: 'p',
-        text: 'Conteneuriser une application existante oblige à expliciter tout ce qui était implicite : versions, variables d\'environnement, dépendances système, volumes de données. L\'exercice ressemble beaucoup à un audit - on découvre ce dont l\'application a réellement besoin pour tourner.',
+        text: 'Conteneuriser une application existante revient à expliciter tous ses prérequis : versions, variables d\'environnement, dépendances système, volumes de données. Résultat : un environnement reproductible, identique en développement et en production, et une mise en service qui tient en une commande.',
       },
       {
         type: 'code',
         lang: 'yaml',
         text: '# docker-compose.yml (extrait simplifié)\nservices:\n  app:\n    build: .\n    env_file: .env\n    depends_on: [db]\n    restart: unless-stopped\n  db:\n    image: postgres:16\n    volumes:\n      - db_data:/var/lib/postgresql/data\nvolumes:\n  db_data:',
       },
-      { type: 'h2', text: 'Automatiser : le pipeline CI/CD' },
+      { type: 'h2', text: 'Le pipeline CI/CD' },
       {
         type: 'p',
-        text: 'Une fois l\'application conteneurisée, chaque push déclenche un pipeline GitHub Actions : lint, tests, build de l\'image. L\'intérêt n\'est pas seulement le gain de temps - c\'est la confiance. Un pipeline vert, c\'est la garantie qu\'on n\'a pas cassé l\'existant, et ça change la façon d\'oser refactorer.',
+        text: 'Chaque push déclenche le pipeline : lint, tests, build de l\'image. Bénéfices constatés : détection immédiate des régressions, déploiements reproductibles, historique des builds consultable. Conséquence directe sur le travail quotidien : le refactoring devient moins risqué, donc plus fréquent.',
       },
       {
         type: 'img',
@@ -220,7 +222,7 @@ export const articles: BlogArticle[] = [
       { type: 'h2', text: 'Le lien direct avec ma formation' },
       {
         type: 'p',
-        text: 'À Ynov, j\'avais utilisé Docker en projet (Ymmo tourne en Docker Compose avec son backend C# et son microservice FastAPI) et Git au quotidien. Le stage a ajouté la dimension industrialisation : écrire un pipeline que d\'autres utiliseront, penser aux secrets, aux caches de build, aux temps d\'exécution. La boucle formation → mission s\'est même refermée dans l\'autre sens : ce que j\'ai appris en stage a directement amélioré mes projets scolaires.',
+        text: 'Docker et Git faisaient déjà partie de mes projets Ynov - Ymmo tourne en Docker Compose avec un backend C# et un microservice FastAPI. Le stage a ajouté la dimension industrialisation : un pipeline utilisé par d\'autres, la gestion des secrets, les caches de build, les temps d\'exécution. En retour, ces pratiques ont été réinjectées dans mes projets scolaires.',
       },
       {
         type: 'todo',
@@ -228,45 +230,45 @@ export const articles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Tout ne s\'est évidemment pas passé sans accroc - le prochain article est justement consacré aux difficultés rencontrées et à la façon dont je les ai résolues.',
+        text: 'Les difficultés rencontrées sur ces missions font l\'objet de l\'article suivant.',
       },
     ],
   },
 
   {
     slug: 'difficultes-solutions-stage',
-    title: 'Ce qui n\'a pas marché du premier coup : difficultés et solutions',
+    title: 'Difficultés rencontrées et solutions apportées',
     date: '2026-07-17',
     dateLabel: '17 juillet 2026',
     tags: ['Retour d\'expérience', 'Debug'],
     excerpt:
-      'Un stage sans blocage n\'existe pas. Retour honnête sur trois difficultés rencontrées pendant mes missions, la méthode pour en sortir, et ce que chacune m\'a appris.',
+      'Trois difficultés rencontrées pendant les missions - environnement de production, code existant, apprentissage d\'Ansible - et la méthode appliquée pour les résoudre.',
     readingTime: '5 min',
     sections: [
       {
         type: 'p',
-        text: 'On apprend peu des jours où tout fonctionne. Cet article revient sur les blocages les plus formateurs de mon stage - pas pour les dramatiser, mais parce que la méthode construite pour en sortir est probablement ce que je réutiliserai le plus longtemps.',
+        text: 'Cet article documente les trois principales difficultés du stage et les solutions mises en place. L\'objectif : expliciter la méthode, réutilisable au-delà du contexte.',
       },
-      { type: 'h2', text: 'Difficulté nº1 - Intervenir sur un système en production' },
+      { type: 'h2', text: 'Difficulté nº1 - Intervenir sur un environnement de production' },
       {
         type: 'p',
-        text: 'Le premier réflexe d\'un étudiant, c\'est de tester pour voir. Sur un réseau en production, ce réflexe est dangereux : derrière chaque service, il y a des utilisateurs réels. La solution a été méthodologique - reproduire d\'abord en local ou sur une machine de test, préparer un plan de retour arrière, puis seulement intervenir. C\'est plus lent, et c\'est le prix de la fiabilité.',
+        text: 'Un environnement utilisé par des clients interdit l\'expérimentation directe. Solution adoptée : reproduire d\'abord en local ou sur une machine de test, préparer un plan de retour arrière, puis intervenir sur un créneau défini. Le rythme est plus lent ; la fiabilité prime.',
       },
-      { type: 'h2', text: 'Difficulté nº2 - Reprendre du code que je n\'ai pas écrit' },
+      { type: 'h2', text: 'Difficulté nº2 - Reprendre du code existant' },
       {
         type: 'p',
-        text: 'La mission d\'audit et de refactoring m\'a confronté à du code existant, avec son histoire et ses choix. J\'ai appris à résister à l\'envie de tout réécrire : comprendre d\'abord (lire, tracer, tester), améliorer ensuite par petites étapes vérifiables. Les cours de qualité logicielle prenaient soudain un sens très concret.',
+        text: 'La mission d\'audit et de refactoring portait sur du code que je n\'avais pas écrit. Méthode appliquée : comprendre avant de modifier (lecture, traçage, tests), puis améliorer par petites étapes vérifiables plutôt que réécrire. Les notions de qualité logicielle vues en cours ont trouvé ici leur application directe.',
       },
-      { type: 'h2', text: 'Difficulté nº3 - Apprendre un outil seul : Ansible' },
+      { type: 'h2', text: 'Difficulté nº3 - Apprendre Ansible en autonomie' },
       {
         type: 'p',
-        text: 'Personne n\'avait le temps de me former sur Ansible ; j\'ai dû construire mon apprentissage moi-même : documentation officielle, un playbook minimal, puis des itérations. Cette autonomie forcée est exactement la compétence que le milieu attend - savoir dire « je ne connais pas encore, mais je sais comment l\'apprendre ».',
+        text: 'Ansible ne faisait pas partie de ma formation et aucune montée en compétence encadrée n\'était possible. Démarche : documentation officielle, playbook minimal, itérations sur des cas réels. Résultat : une méthode d\'auto-formation applicable à n\'importe quel outil - identifier le besoin, réduire le périmètre, itérer.',
       },
       {
         type: 'todo',
         text: 'Remplacer ou compléter ces trois difficultés par tes blocages réels (un incident précis, une erreur commise, un bug retors) - plus c\'est concret et daté, plus l\'analyse réflexive sera crédible.',
       },
-      { type: 'h2', text: 'La méthode qui reste' },
+      { type: 'h2', text: 'La méthode retenue' },
       {
         type: 'ul',
         items: [
@@ -278,44 +280,44 @@ export const articles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Avec le recul, ces difficultés ont été le vrai programme du stage : elles m\'ont fait passer de « savoir faire un TP » à « savoir travailler ».',
+        text: 'Ces situations ont structuré ma façon de travailler : reproduire, corriger la cause, documenter - avant de passer à la tâche suivante.',
       },
     ],
   },
 
   {
     slug: 'veille-ansible-infrastructure-as-code',
-    title: 'Veille : pourquoi l\'Infrastructure as Code change le métier',
+    title: 'Veille : l\'Infrastructure as Code, d\'Ansible à GitOps',
     date: '2026-07-31',
     dateLabel: '31 juillet 2026',
     tags: ['Veille', 'Ansible', 'IaC'],
     excerpt:
-      'Découvrir Ansible en stage m\'a ouvert à un sujet plus large : l\'Infrastructure as Code. État des lieux, ce que j\'en ai testé, et mon avis d\'étudiant développeur sur ce que ça implique pour le métier.',
+      'État des lieux de l\'Infrastructure as Code à partir de mon initiation Ansible en stage : principe, écosystème, cas d\'usage et limites pour une petite structure.',
     readingTime: '5 min',
     sections: [
       {
         type: 'p',
-        text: 'Pendant mon stage, l\'initiation à Ansible a été une porte d\'entrée vers un sujet de fond : l\'Infrastructure as Code (IaC), c\'est-à-dire décrire ses serveurs et leur configuration dans des fichiers versionnés plutôt que de les configurer à la main. Cet article de veille fait le point sur ce que j\'ai compris, testé, et ce que j\'en pense.',
+        text: 'L\'initiation à Ansible pendant le stage m\'a conduit à étudier le sujet plus large de l\'Infrastructure as Code (IaC) : décrire les serveurs et leur configuration dans des fichiers versionnés plutôt que de les configurer manuellement. Synthèse de cette veille.',
       },
-      { type: 'h2', text: 'Le principe : des serveurs qu\'on décrit, pas qu\'on bricole' },
+      { type: 'h2', text: 'Le principe' },
       {
         type: 'p',
-        text: 'Avec Ansible, une configuration devient un playbook YAML : lisible, rejouable, versionné dans Git. La différence avec un script Bash n\'est pas cosmétique - Ansible est idempotent : rejouer le playbook ne casse rien, il converge vers l\'état décrit. Pour un stagiaire, c\'est aussi une documentation exécutable de l\'infrastructure.',
+        text: 'Avec Ansible, une configuration devient un playbook YAML versionné dans Git. Différence structurante avec un script shell : l\'idempotence - rejouer le playbook converge vers l\'état décrit, sans effet de bord. Le playbook sert aussi de documentation exécutable de l\'infrastructure.',
       },
       {
         type: 'code',
         lang: 'yaml',
         text: '# playbook.yml - exemple minimal testé pendant le stage\n- hosts: web\n  become: true\n  tasks:\n    - name: Installer nginx\n      ansible.builtin.apt:\n        name: nginx\n        state: present\n    - name: Démarrer et activer le service\n      ansible.builtin.service:\n        name: nginx\n        state: started\n        enabled: true',
       },
-      { type: 'h2', text: 'Ce que dit l\'écosystème' },
+      { type: 'h2', text: 'L\'écosystème' },
       {
         type: 'p',
-        text: 'La tendance dépasse largement Ansible : Terraform et OpenTofu pour provisionner le cloud, les conteneurs et Kubernetes pour l\'exécution, GitOps pour piloter le tout depuis des dépôts Git. Le fil conducteur est le même - rapprocher l\'infrastructure des pratiques du développement logiciel : revue de code, CI, historique, rollback.',
+        text: 'La tendance dépasse Ansible : Terraform et OpenTofu pour le provisioning cloud, conteneurs et Kubernetes pour l\'exécution, GitOps pour piloter l\'ensemble depuis des dépôts Git. Le fil conducteur : appliquer à l\'infrastructure les pratiques du développement logiciel - revue de code, CI, historique, rollback.',
       },
-      { type: 'h2', text: 'Mon avis, à ma hauteur' },
+      { type: 'h2', text: 'Mon analyse' },
       {
         type: 'p',
-        text: 'Je suis convaincu que c\'est une compétence charnière pour mon profil : les frontières entre « dev » et « ops » sont exactement là où je veux travailler. Mais mon stage m\'a aussi appris la nuance - dans une petite structure, tout automatiser n\'est pas toujours rentable ; l\'IaC vaut le coût quand l\'infrastructure vit et se multiplie. Savoir juger ce seuil fait partie du métier.',
+        text: 'Pour mon profil, l\'IaC est une compétence charnière entre développement et opérations - exactement la zone où je veux travailler. Limite constatée en stage : dans une petite structure, tout automatiser n\'est pas toujours rentable ; l\'IaC se justifie quand l\'infrastructure évolue ou se multiplie. Savoir évaluer ce seuil fait partie du métier.',
       },
       {
         type: 'ul',
@@ -330,17 +332,17 @@ export const articles: BlogArticle[] = [
 
   {
     slug: 'bilan-stage-2026',
-    title: 'Bilan de mon stage : ce que ces trois mois ont changé',
+    title: 'Bilan de stage : compétences acquises et axes de progression',
     date: '2026-08-14',
     dateLabel: '14 août 2026',
     tags: ['Stage 2026', 'Bilan'],
     excerpt:
-      'L\'article bilan : mon ressenti sur ces trois mois entre développement et infrastructure, les compétences réellement acquises, mes points d\'amélioration, et ce que je proposerais si le stage continuait.',
+      'Bilan des trois mois de stage : compétences acquises formulées et vérifiables, points d\'amélioration identifiés, propositions pour la suite de la mission.',
     readingTime: '6 min',
     sections: [
       {
         type: 'p',
-        text: 'Trois mois entre développement web, administration réseau et DevOps. Ce dernier article prend le recul demandé par l\'exercice - et que je me dois à moi-même : qu\'est-ce que ce stage a réellement changé dans ma façon de travailler et dans mon projet professionnel ?',
+        text: 'Trois mois entre développement web, administration réseau et DevOps. Ce bilan récapitule ce que le stage a produit : compétences acquises, axes de progression et propositions concrètes.',
       },
       { type: 'h2', text: 'Mon ressenti' },
       {
@@ -349,12 +351,12 @@ export const articles: BlogArticle[] = [
       },
       {
         type: 'p',
-        text: 'Ce que je peux dire sans hésiter : la double casquette du stage - développement et infrastructure - correspondait exactement à ce que je cherchais. Elle a confirmé mon orientation Fullstack & DevOps, au point d\'avoir réorienté mon CV et ce portfolio dans ce sens.',
+        text: 'Un constat objectif : la double dimension du stage - développement et infrastructure - correspond à l\'orientation que je vise. Elle a confirmé mon positionnement Fullstack & DevOps, répercuté depuis sur mon CV et sur ce portfolio.',
       },
       { type: 'h2', text: 'Les compétences acquises' },
       {
         type: 'p',
-        text: 'En suivant la méthode « je suis capable de + verbe + objet + contexte » proposée dans le guide de stage, voici les compétences que je peux désormais revendiquer, preuves à l\'appui :',
+        text: 'En suivant la formulation « je suis capable de + verbe + objet + contexte » proposée dans le guide de stage :',
       },
       {
         type: 'ul',
@@ -384,12 +386,12 @@ export const articles: BlogArticle[] = [
       { type: 'h2', text: 'Mes suggestions' },
       {
         type: 'p',
-        text: 'Si la mission se poursuivait, je proposerais trois chantiers dans la continuité directe de ce que j\'ai livré : généraliser l\'IaC avec Ansible pour rendre les serveurs reproductibles, étendre la supervision aux applications clientes (et pas seulement aux services réseau), et documenter les procédures d\'intervention dans un wiki unique - la cartographie du premier jour m\'a prouvé la valeur d\'une documentation à jour.',
+        text: 'Si la mission se poursuivait, trois chantiers dans la continuité directe de ce qui a été livré : généraliser l\'IaC avec Ansible pour rendre les serveurs reproductibles, étendre la supervision aux applications clientes (et pas seulement aux services réseau), et centraliser les procédures d\'intervention dans un wiki unique.',
       },
       { type: 'h2', text: 'Et maintenant' },
       {
         type: 'p',
-        text: 'Ce stage clôt mon Bachelor 2 et ouvre la suite : une alternance dès septembre 2026, sur un rythme de 2 semaines en entreprise pour 1 semaine de cours, idéalement sur un poste mêlant développement et pratiques DevOps. Ce blog continuera à documenter ce parcours.',
+        text: 'Ce stage clôt mon Bachelor 2 et ouvre la suite : une alternance dès septembre 2026, sur un rythme de 2 semaines en entreprise pour 1 semaine de cours, sur un poste mêlant développement et pratiques DevOps. Ce blog continuera à documenter ce parcours.',
       },
     ],
   },
