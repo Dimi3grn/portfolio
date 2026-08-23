@@ -108,8 +108,11 @@
   transform: translateY(-2px);
 }
 
+/* figures wider than the text column (breakout), capped by the viewport */
 .figure {
-  margin: 26px 0;
+  width: min(940px, calc(100vw - 48px));
+  margin: 30px 0 30px 50%;
+  transform: translateX(-50%);
 }
 
 .figure img {
