@@ -43,21 +43,41 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
   sections: [
     { type: 'h2', text: 'La structure' },
     {
-      type: 'todo',
-      text: 'Décrire l\'entreprise avec tes mots (le guide interdit le copier-coller de brochure) : activité de l\'indépendant, localisation, en quoi consiste son infrastructure réseau, pourquoi tu as choisi ce stage.',
+      type: 'p',
+      text: 'Le stage s\'est déroulé chez Youkyi, la structure d\'Alexandre Agasseau, professionnel indépendant. Son activité repose sur une infrastructure auto-hébergée qu\'il administre lui-même, et sur laquelle ses clients font tourner leurs propres services.',
     },
     {
       type: 'p',
-      text: 'Stage de fin de Bachelor 2, effectué de mai à juillet 2026 auprès d\'un professionnel indépendant disposant de sa propre infrastructure réseau. Une structure de cette taille implique un périmètre large : sur une même période, les missions couvrent l\'administration de cette infrastructure, le développement web et les pratiques DevOps.',
+      text: 'Concrètement, il s\'agit d\'un homelab de taille conséquente : plusieurs machines Linux, des services mutualisés entre les clients, et les contraintes qui vont avec. Ce n\'est pas un environnement de démonstration - ce qui tourne dessus est en production, et une erreur de configuration se voit immédiatement côté client.',
+    },
+    {
+      type: 'p',
+      text: 'J\'ai choisi ce stage pour sa dimension infrastructure. Mon parcours était jusque-là orienté développement, et il me manquait la partie réseau et système pour aller vers un profil DevOps. Une structure indépendante offrait exactement ça : un périmètre large, peu de cloisonnement entre les rôles, et un accès direct à l\'ensemble de l\'infrastructure plutôt qu\'à un domaine restreint.',
+    },
+    {
+      type: 'p',
+      text: 'Le stage a eu lieu de mai à juillet 2026, en fin de Bachelor 2. Ce format explique l\'étendue des missions : sur une même période, elles couvrent l\'administration de cette infrastructure, le développement web et les pratiques DevOps.',
     },
     { type: 'h2', text: 'L\'environnement de travail' },
     {
-      type: 'todo',
-      text: 'Décrire concrètement le quotidien : sur site ou à distance ? Quels outils de communication ? Comment se passaient les échanges avec ton tuteur (points quotidiens, revue de code, tickets…) ?',
+      type: 'p',
+      text: 'Tout s\'est fait à distance, sans aucune présence sur site. Trois canaux cohabitaient : Discord pour le quotidien, Teams pour les échanges plus cadrés, et la plateforme interne du tuteur, qui regroupait la documentation des services et les tâches à traiter.',
     },
     {
       type: 'p',
-      text: 'Environnement technique : une infrastructure réseau en propre - machines Linux, services auto-hébergés (DNS, DHCP, VPN), supervision - et le site web de l\'activité. L\'ensemble est utilisé au quotidien : chaque intervention a un impact réel, ce qui impose une méthode - sauvegarde préalable, fenêtre d\'intervention, plan de retour arrière.',
+      text: 'Cette plateforme a compté plus que je ne l\'imaginais au départ. Chaque service disposait de sa fiche, et une tâche renvoyait vers la documentation correspondante : avant de toucher à quoi que ce soit, on savait à quoi on avait affaire. C\'est aussi ce qui m\'a fait comprendre qu\'une intervention n\'est terminée que lorsqu\'elle est écrite quelque part.',
+    },
+    {
+      type: 'p',
+      text: 'Le travail était organisé en deux créneaux par jour, le midi et le soir, chacun ouvert par un point avec le tuteur. En pratique, il consacrait environ deux heures à chaque prise et à chaque fin de poste : cadrage de ce qu\'il y avait à faire en arrivant, revue de ce qui avait été produit en partant. Ce n\'était donc jamais du travail en autonomie sèche - il y avait toujours quelqu\'un pour valider une approche avant de la lancer.',
+    },
+    {
+      type: 'p',
+      text: 'Travailler à distance sur une infrastructure en production change la façon d\'intervenir. Sans accès physique aux machines, chaque manipulation doit préserver le lien distant : une erreur qui coupe l\'accès ne se rattrape pas en se levant de sa chaise. Cette contrainte a structuré ma méthode plus que n\'importe quelle consigne.',
+    },
+    {
+      type: 'p',
+      text: 'Le périmètre technique couvre les services auto-hébergés (DNS, DHCP, VPN, supervision) et le site web de l\'activité. Comme tout est utilisé en continu, chaque intervention impose une méthode : sauvegarde préalable, fenêtre d\'intervention annoncée, plan de retour arrière prêt avant de toucher quoi que ce soit.',
     },
     { type: 'h2', text: 'Mes missions' },
     {
@@ -83,7 +103,7 @@ export const articles: BlogArticle[] = [
     dateLabel: '5 juin 2026',
     tags: ['Stage 2026', 'Intégration'],
     excerpt:
-      'Prise en main de l\'environnement, cartographie du parc et méthode de travail mise en place pour être opérationnel rapidement.',
+      'Prise en main de l\'environnement, cartographie des machines et des services, et méthode de travail mise en place pour être opérationnel rapidement.',
     readingTime: '4 min',
     sections: [
       {
@@ -91,8 +111,16 @@ export const articles: BlogArticle[] = [
         text: 'Profil au départ du stage : développement (Go, Java, React), connaissances d\'infrastructure encore théoriques. Premier objectif fixé avec le tuteur : comprendre l\'existant avant toute intervention.',
       },
       {
-        type: 'todo',
-        text: 'Raconter ton vrai premier jour : accueil, présentation du parc, première tâche confiée. Une anecdote concrète (même petite) rend l\'article vivant.',
+        type: 'p',
+        text: 'Le premier jour a suivi un ordre simple : mise en place des accès, tour d\'horizon des tâches prévues sur la durée du stage, puis un TP d\'introduction pour se mettre en jambes. Rien de spectaculaire, mais l\'enchaînement était réfléchi - on ne m\'a pas lâché sur l\'infrastructure avant que je sache m\'y connecter et à quoi m\'attendre.',
+      },
+      {
+        type: 'p',
+        text: 'On m\'a d\'abord demandé de me familiariser avec Proxmox, l\'hyperviseur sur lequel repose l\'ensemble des machines virtuelles. C\'était le bon point d\'entrée : tout ce qui a suivi - les services réseau, les conteneurs, les interventions - tourne sur des machines qui vivent là. Comprendre l\'étage du dessous avant de toucher à celui du dessus a évité pas mal de confusion par la suite.',
+      },
+      {
+        type: 'p',
+        text: 'C\'est aussi là que j\'ai mesuré l\'écart entre les cours et la réalité. Je savais ce qu\'était une machine virtuelle ; je n\'en avais jamais vu tout un ensemble tourner en parallèle, avec des services que quelqu\'un utilise pendant que vous les regardez.',
       },
       { type: 'h2', text: 'Première mission : cartographier le réseau' },
       {
@@ -118,7 +146,7 @@ export const articles: BlogArticle[] = [
         type: 'ul',
         items: [
           'Savoir : modèles OSI/TCP-IP, rôles DNS/DHCP - acquis en cours, confrontés au réel.',
-          'Savoir-faire : documenter un parc existant, utiliser SSH proprement, lire des configurations.',
+          'Savoir-faire : documenter une infrastructure existante, utiliser SSH proprement, lire des configurations.',
           'Savoir-être : poser des questions au bon moment, ne pas improviser sur un système en production.',
         ],
       },
@@ -165,8 +193,29 @@ export const articles: BlogArticle[] = [
         text: 'Second volet de la mission : la surveillance de ces services (disponibilité, espace disque, certificats). Avec une supervision en place, les incidents sont détectés par des alertes plutôt que signalés par les utilisateurs, et les interventions deviennent planifiables. C\'est un changement de fonctionnement mesurable, pas un confort.',
       },
       {
-        type: 'todo',
-        text: 'Préciser l\'outil de supervision réellement utilisé (Zabbix ? Uptime Kuma ? Grafana ? scripts maison ?) et un exemple réel d\'alerte reçue pendant le stage.',
+        type: 'p',
+        text: 'L\'outil retenu est Grafana. Il faut être précis sur son rôle : Grafana ne collecte rien lui-même, il lit des métriques déjà remontées par les machines et les met en forme. C\'est la couche visible d\'une chaîne qui commence sur chaque hôte - ce point m\'a demandé un moment pour être clair, parce qu\'on parle couramment de « mettre en place Grafana » comme si l\'outil faisait tout le travail.',
+      },
+      {
+        type: 'p',
+        text: 'Les indicateurs suivis se sont stabilisés autour de quatre familles :',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Disponibilité des services critiques : si le DNS tombe, tout ce qui en dépend devient injoignable, et le symptôme observé n\'a rien à voir avec la cause.',
+          'Espace disque par machine : la panne la plus banale, la plus évitable, et celle qui casse le plus de choses d\'un coup.',
+          'Expiration des certificats : une échéance connue des mois à l\'avance ne devrait jamais provoquer d\'incident.',
+          'Charge des machines virtuelles côté hyperviseur : pour distinguer un service lent d\'un hôte saturé.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'L\'alerte la plus fréquente pendant le stage a été le franchissement de seuil sur l\'espace disque. Le cas typique : une partition qui se remplit non pas à cause des données du service, mais des journaux qu\'il produit. La réaction immédiate - purger - règle le symptôme pour quelques jours. Le vrai correctif est ailleurs : configurer la rotation des journaux pour que le problème ne revienne pas. C\'est la première fois que j\'ai vu concrètement la différence entre traiter un incident et le résoudre.',
+      },
+      {
+        type: 'p',
+        text: 'La leçon qui m\'a le plus servi ensuite porte sur les seuils. Une alerte trop sensible se déclenche en permanence, on prend l\'habitude de l\'ignorer, et le jour où elle signale un vrai problème elle est devenue invisible. Une alerte doit correspondre à une action à mener : si personne ne fait rien quand elle arrive, elle n\'aurait pas dû être écrite.',
       },
       { type: 'h2', text: 'Connaissances mobilisées' },
       {
@@ -191,12 +240,12 @@ export const articles: BlogArticle[] = [
     dateLabel: '3 juillet 2026',
     tags: ['DevOps', 'Docker', 'CI/CD'],
     excerpt:
-      'Conteneurisation d\'applications existantes avec Docker/Compose et mise en place d\'un pipeline GitHub Actions : périmètre, choix techniques et lien direct avec la formation.',
-    readingTime: '6 min',
+      'Conteneurisation avec Docker/Compose, puis la même chaîne CI/CD montée trois fois sur trois forges différentes : GitHub Actions, Gitea et GitLab.',
+    readingTime: '7 min',
     sections: [
       {
         type: 'p',
-        text: 'Mission DevOps du stage : conteneuriser des applications existantes avec Docker et Docker Compose, puis automatiser la vérification et le build avec un pipeline GitHub Actions.',
+        text: 'Mission DevOps du stage : conteneuriser une application, puis automatiser sa vérification et sa publication. L\'exercice avait une contrainte inhabituelle et c\'est ce qui en a fait l\'intérêt : monter la même chaîne trois fois, sur trois forges différentes - GitHub Actions, Gitea auto-hébergé, puis GitLab.',
       },
       { type: 'h2', text: 'Conteneuriser : expliciter l\'environnement' },
       {
@@ -206,12 +255,41 @@ export const articles: BlogArticle[] = [
       {
         type: 'code',
         lang: 'yaml',
-        text: '# docker-compose.yml (extrait simplifié)\nservices:\n  app:\n    build: .\n    env_file: .env\n    depends_on: [db]\n    restart: unless-stopped\n  db:\n    image: postgres:16\n    volumes:\n      - db_data:/var/lib/postgresql/data\nvolumes:\n  db_data:',
+        text: '# la stack de déploiement ne construit plus rien :\n# elle consomme l\'image publiée par le pipeline\nservices:\n  app:\n    image: <registre>/mon-app:latest\n    restart: unless-stopped\n    healthcheck:\n      test: ["CMD", "python", "-c",\n        "import urllib.request; urllib.request.urlopen(\'http://localhost:5000/api/health\')"]\n      interval: 10s\n      retries: 5\n    networks: [appnet]\n\n  proxy:\n    image: nginx:1.27-alpine\n    ports: ["8080:80"]\n    depends_on:\n      app: { condition: service_healthy }\n    networks: [appnet]\n\nnetworks:\n  appnet:',
       },
-      { type: 'h2', text: 'Le pipeline CI/CD' },
       {
         type: 'p',
-        text: 'Chaque push déclenche le pipeline : lint, tests, build de l\'image. Bénéfices constatés : détection immédiate des régressions, déploiements reproductibles, historique des builds consultable. Conséquence directe sur le travail quotidien : le refactoring devient moins risqué, donc plus fréquent.',
+        text: 'Un détail de ce fichier m\'a coûté une demi-heure avant que je comprenne : depends_on seul ne garantit que l\'ordre de démarrage, pas que le service soit prêt à répondre. Sans le couple healthcheck / condition: service_healthy, le proxy démarre avant l\'application et sert une erreur 502. La différence entre « démarré » et « prêt » n\'est pas une subtilité de documentation.',
+      },
+      { type: 'h2', text: 'Le pipeline, trois fois plutôt qu\'une' },
+      {
+        type: 'p',
+        text: 'La chaîne est toujours la même : un push construit l\'image, la teste, puis la publie sur un registre. Ce qui change d\'une forge à l\'autre est la syntaxe et, surtout, la façon dont le travail est exécuté.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'GitHub Actions : runner auto-hébergé installé sur le serveur. Le job s\'exécute directement sur la machine, donc Docker et les dossiers de déploiement sont accessibles tels quels.',
+          'Gitea : forge auto-hébergée, jobs exécutés dans un conteneur. Le localhost du job n\'est plus celui du serveur - le test de fumée a dû être réécrit pour s\'exécuter à l\'intérieur du conteneur testé.',
+          'GitLab : runner en mode shell, retour à une exécution directe sur la machine, mais avec une syntaxe de pipeline entièrement différente (stages et jobs au lieu d\'étapes).',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Le runner auto-hébergé n\'était pas un choix esthétique : le serveur n\'est pas joignable depuis Internet. Un runner hébergé par la forge ne peut tout simplement pas l\'atteindre. C\'est le runner qui sort vers la forge, récupère le travail, et l\'exécute localement.',
+      },
+      {
+        type: 'p',
+        text: 'Refaire trois fois la même chose a un effet que je n\'attendais pas : à la troisième, on ne lit plus la documentation de la même façon. On cherche où l\'outil range les concepts qu\'on connaît déjà - où il déclare les étapes, où il stocke les secrets, comment il désigne un runner - au lieu de réapprendre depuis zéro.',
+      },
+      { type: 'h2', text: 'Taguer par le hash de commit' },
+      {
+        type: 'p',
+        text: 'Chaque image est publiée avec deux étiquettes : latest et le hash court du commit. La seconde est celle qui compte. latest est mouvante - elle pointe vers le dernier build, et si deux personnes publient à quelques minutes d\'intervalle, plus personne ne sait quelle version tourne réellement. Le hash, lui, est immuable et relie l\'image au commit exact qui l\'a produite.',
+      },
+      {
+        type: 'p',
+        text: 'C\'est ce qui rend un retour arrière possible : on redéploie un tag connu comme fonctionnel plutôt que de reconstruire en espérant. En production, on déploie un tag explicite, jamais latest.',
       },
       {
         type: 'img',
@@ -224,9 +302,23 @@ export const articles: BlogArticle[] = [
         type: 'p',
         text: 'Docker et Git faisaient déjà partie de mes projets Ynov - Ymmo tourne en Docker Compose avec un backend C# et un microservice FastAPI. Le stage a ajouté la dimension industrialisation : un pipeline utilisé par d\'autres, la gestion des secrets, les caches de build, les temps d\'exécution. En retour, ces pratiques ont été réinjectées dans mes projets scolaires.',
       },
+      { type: 'h2', text: 'Ce que le test de fumée a réellement bloqué' },
       {
-        type: 'todo',
-        text: 'Ajouter un détail réel sur le projet conteneurisé pendant le stage (type d\'application, stack) et éventuellement une capture du pipeline GitHub Actions (onglet Actions, en anonymisant le repo).',
+        type: 'p',
+        text: 'Le pipeline commence par un test volontairement minimal : construire l\'image, la lancer, appeler son point de contrôle de santé. Rien de sophistiqué. Pour vérifier qu\'il servait à quelque chose, j\'ai poussé une faute de syntaxe délibérée.',
+      },
+      {
+        type: 'p',
+        text: 'Le pipeline est passé au rouge à cette première étape. L\'image cassée n\'a jamais atteint le registre - le tag correspondant est simplement absent - et la version en service n\'a pas bougé. Le correctif poussé derrière a fait repasser la chaîne au vert. Une application qui ne démarre pas ne peut pas être publiée : c\'est peu, mais c\'est exactement ce qu\'on lui demande.',
+      },
+      { type: 'h2', text: 'Séparer la construction du déploiement' },
+      {
+        type: 'p',
+        text: 'Sur deux des trois forges, j\'ai volontairement arrêté le pipeline après la publication de l\'image, sans étape de déploiement. La mise en service reste une action décidée par quelqu\'un. Ce n\'est pas de la prudence excessive : le maillon le plus fragile de toute la chaîne était justement le déploiement, où le runner pilotait sa propre machine via la socket Docker. Pratique en laboratoire, difficilement défendable ailleurs - qui détient cette socket détient la machine.',
+      },
+      {
+        type: 'p',
+        text: 'Le déploiement manuel a lui aussi eu sa surprise : après avoir recréé le conteneur applicatif, le site renvoyait des erreurs 502 alors que tout semblait sain. Nginx avait mis en cache l\'adresse de l\'application au démarrage, et le conteneur recréé en avait une nouvelle. Un redémarrage du proxy suffisait. Le genre de détail qu\'aucun cours ne mentionne et qu\'on n\'oublie plus.',
       },
       {
         type: 'p',
@@ -242,31 +334,59 @@ export const articles: BlogArticle[] = [
     dateLabel: '17 juillet 2026',
     tags: ['Retour d\'expérience', 'Debug'],
     excerpt:
-      'Trois difficultés rencontrées pendant les missions - environnement de production, code existant, apprentissage d\'Ansible - et la méthode appliquée pour les résoudre.',
-    readingTime: '5 min',
+      'Trois blocages réels du stage - un certificat impossible à obtenir, une image qui ignore une convention, un message d\'erreur qui désigne le mauvais coupable - et ce que chacun a changé dans ma méthode.',
+    readingTime: '6 min',
     sections: [
       {
         type: 'p',
-        text: 'Cet article documente les trois principales difficultés du stage et les solutions mises en place. L\'objectif : expliciter la méthode, réutilisable au-delà du contexte.',
+        text: 'Trois blocages du stage, choisis parce qu\'ils m\'ont chacun coûté du temps et appris quelque chose de transposable. Les deux premiers portent sur des outils ; le troisième sur ma façon de chercher.',
       },
-      { type: 'h2', text: 'Difficulté nº1 - Intervenir sur un environnement de production' },
+      { type: 'h2', text: 'Le certificat qui ne sortait jamais' },
       {
         type: 'p',
-        text: 'L\'infrastructure et le site sont utilisés au quotidien : pas d\'expérimentation directe possible. Solution adoptée : reproduire d\'abord en local ou sur une machine de test, préparer un plan de retour arrière, puis intervenir sur un créneau défini. Le rythme est plus lent ; la fiabilité prime.',
+        text: 'Objectif : obtenir un vrai certificat TLS pour un service hébergé sur un serveur qui n\'est pas joignable depuis Internet. La validation habituelle est donc exclue - elle suppose qu\'une autorité extérieure vienne lire un fichier sur le serveur. La solution passe par une validation qui repose sur le DNS : on publie un enregistrement, l\'autorité le lit, et le serveur n\'a jamais besoin d\'être atteignable.',
       },
-      { type: 'h2', text: 'Difficulté nº2 - Reprendre du code existant' },
       {
         type: 'p',
-        text: 'La mission d\'audit et de refactoring portait sur du code que je n\'avais pas écrit. Méthode appliquée : comprendre avant de modifier (lecture, traçage, tests), puis améliorer par petites étapes vérifiables plutôt que réécrire. Les notions de qualité logicielle vues en cours ont trouvé ici leur application directe.',
+        text: 'Sur le papier, c\'est réglé. En pratique, la demande échouait systématiquement avec un dépassement de délai sur le port 53. Le blocage a duré parce que je cherchais l\'erreur du mauvais côté : je vérifiais que l\'enregistrement était bien créé - il l\'était.',
       },
-      { type: 'h2', text: 'Difficulté nº3 - Apprendre Ansible en autonomie' },
       {
         type: 'p',
-        text: 'Ansible ne faisait pas partie de ma formation et aucune montée en compétence encadrée n\'était possible. Démarche : documentation officielle, playbook minimal, itérations sur des cas réels. Résultat : une méthode d\'auto-formation applicable à n\'importe quel outil - identifier le besoin, réduire le périmètre, itérer.',
+        text: 'La cause était ailleurs. Avant de solliciter l\'autorité, l\'outil vérifiait lui-même son propre travail en interrogeant directement les serveurs DNS. Or les requêtes DNS sortantes étaient bloquées sur ce réseau. Le contrôle échouait, et l\'outil abandonnait avant même de demander le certificat. Il a suffi de désactiver cette auto-vérification pour que tout passe.',
       },
       {
-        type: 'todo',
-        text: 'Remplacer ou compléter ces trois difficultés par tes blocages réels (un incident précis, une erreur commise, un bug retors) - plus c\'est concret et daté, plus l\'analyse réflexive sera crédible.',
+        type: 'quote',
+        text: 'Ce n\'était pas la tâche qui échouait, c\'était le contrôle de la tâche. Depuis, quand un outil échoue sur une étape que je crois maîtriser, je vérifie d\'abord ce qu\'il vérifie, lui.',
+      },
+      { type: 'h2', text: 'Quand l\'image ne suit pas la convention' },
+      {
+        type: 'p',
+        text: 'Deuxième blocage, sur la gestion des mots de passe. La bonne pratique consiste à ne plus les passer en variables d\'environnement - où ils restent lisibles par quiconque peut inspecter le conteneur - mais à les faire lire depuis un fichier. La plupart des images officielles supportent cette convention. Celle que j\'utilisais, non.',
+      },
+      {
+        type: 'p',
+        text: 'Solution : construire une image dérivée avec un point d\'entrée qui lit le fichier et le met à disposition de l\'application avant de lui rendre la main. Le secret disparaît alors de l\'inspection du conteneur, ce que j\'ai vérifié plutôt que supposé.',
+      },
+      {
+        type: 'p',
+        text: 'Sauf que l\'application refusait toujours de démarrer, en annonçant une configuration incomplète, alors que le secret était bien chargé - les journaux le confirmaient. J\'ai fini par ouvrir le script d\'installation à l\'intérieur de l\'image officielle : il exigeait cinq variables, pas quatre. Il en manquait une, sans aucun rapport avec les mots de passe. Lire le code de l\'outil qu\'on utilise reste souvent plus rapide que deviner son comportement.',
+      },
+      { type: 'h2', text: 'Un faux problème d\'authentification' },
+      {
+        type: 'p',
+        text: 'Le cas qui m\'a le plus appris est celui où le message d\'erreur désignait le mauvais coupable. Un outil d\'analyse intégré au pipeline échouait invariablement sur « clé d\'API invalide ». J\'ai d\'abord suspecté la clé elle-même, puis la région du compte, puis les droits d\'accès.',
+      },
+      {
+        type: 'p',
+        text: 'La bonne décision a été de tester la couche la plus basse en premier : appeler l\'API directement, hors du pipeline, avec la clé brute. Réponse au premier essai : invalide. Deuxième essai en copiant la clé au lieu de la retaper : valide. J\'avais confondu un I majuscule et un l minuscule, indiscernables dans la police du terminal.',
+      },
+      {
+        type: 'p',
+        text: 'La clé étant confirmée bonne, le problème ne pouvait plus venir que de sa transmission. Il venait d\'une ligne de configuration ajoutée lors d\'une itération précédente, qui redéclarait la variable en la faisant se référencer elle-même. Le pipeline recevait le nom de la variable au lieu de sa valeur. Aucun message n\'y faisait allusion.',
+      },
+      {
+        type: 'p',
+        text: 'Deux enseignements que j\'applique maintenant par réflexe : tester la couche la plus basse avant de suspecter la configuration, et se méfier d\'un message d\'erreur qui désigne un coupable évident. « Clé invalide » ne voulait pas dire que la clé était mauvaise, mais qu\'elle n\'arrivait pas.',
       },
       { type: 'h2', text: 'La méthode retenue' },
       {
@@ -346,12 +466,39 @@ export const articles: BlogArticle[] = [
       },
       { type: 'h2', text: 'Mon ressenti' },
       {
-        type: 'todo',
-        text: 'Écrire ton ressenti réel avec tes mots : ce qui t\'a plu, surpris, frustré ; un moment marquant du stage ; la relation avec ton tuteur. C\'est la partie la plus personnelle du blog - elle ne peut pas être rédigée à ta place.',
+        type: 'p',
+        text: 'Ce que j\'ai préféré tient en trois choses : la relation avec mon tuteur, l\'autonomie encadrée, et le fait de sentir la progression au fil des semaines plutôt que de la constater à la fin.',
       },
       {
         type: 'p',
-        text: 'Un constat objectif : la double dimension du stage - développement et infrastructure - correspond à l\'orientation que je vise. Elle a confirmé mon positionnement Fullstack & DevOps, répercuté depuis sur mon CV et sur ce portfolio.',
+        text: 'Mon tuteur ne nous a jamais donné une réponse directement. Pas une seule fois. Il nous renvoyait chercher, indiquait des sources, orientait la recherche quand elle partait dans le décor. En revanche, il savait expliquer : une fois qu\'on avait trouvé, il remettait la pièce à sa place dans l\'ensemble. Il nous a épargné l\'errance, jamais le travail.',
+      },
+      {
+        type: 'p',
+        text: 'Sur le moment, c\'est parfois frustrant. Avec le recul, c\'est ce qui distingue ce stage d\'un stage où l\'on exécute : les méthodes décrites dans l\'article sur les difficultés, je ne les ai pas apprises parce qu\'on me les a enseignées, mais parce qu\'il ne m\'a pas laissé le choix de les construire.',
+      },
+      { type: 'h2', text: 'Ce qui m\'a surpris' },
+      {
+        type: 'p',
+        text: 'Mes lacunes, d\'abord. Je pensais avoir des bases correctes ; j\'ai découvert qu\'une notion comprise en cours et une notion utilisable devant une infrastructure réelle sont deux choses différentes.',
+      },
+      {
+        type: 'p',
+        text: 'La portée des actions, ensuite. En cours, une erreur se solde par un exercice raté. Ici, une mauvaise manipulation se voit sur une infrastructure que quelqu\'un utilise. Cette différence-là ne se transmet pas par un cours : il faut avoir eu le doigt au-dessus de la touche Entrée en se demandant si on a bien vérifié.',
+      },
+      { type: 'h2', text: 'Ce qui a été pénible' },
+      {
+        type: 'p',
+        text: 'Passer des heures sur un blocage en tournant en rond. C\'est la partie la moins glorieuse et la plus fréquente. Les trois difficultés racontées plus haut ont chacune coûté un temps disproportionné par rapport à la taille du correctif final - une option à ajouter, une variable manquante, une ligne à supprimer.',
+      },
+      {
+        type: 'p',
+        text: 'C\'est aussi de là que vient le plus utile de ce stage. Chercher au mauvais endroit pendant deux heures apprend, mais seulement si on prend ensuite la peine de comprendre pourquoi on cherchait là. La méthode ne vient pas des problèmes résolus : elle vient des problèmes mal cherchés.',
+      },
+      { type: 'h2', text: 'Ce que le stage a confirmé' },
+      {
+        type: 'p',
+        text: 'La double dimension du stage - développement et infrastructure - correspond à l\'orientation que je vise. Elle a confirmé mon positionnement Fullstack & DevOps, répercuté depuis sur mon CV et sur ce portfolio.',
       },
       { type: 'h2', text: 'Les compétences acquises' },
       {
@@ -361,7 +508,7 @@ export const articles: BlogArticle[] = [
       {
         type: 'ul',
         items: [
-          'Je suis capable de cartographier et documenter un réseau d\'entreprise existant (machines, services, dépendances).',
+          'Je suis capable de cartographier et documenter une infrastructure existante (machines, services, dépendances).',
           'Je suis capable d\'administrer des services DNS, DHCP et VPN sur un environnement de production, en suivant une procédure d\'intervention.',
           'Je suis capable de conteneuriser une application existante avec Docker/Compose et de mettre en place son pipeline CI/CD sous GitHub Actions.',
           'Je suis capable d\'automatiser une configuration serveur simple avec Ansible.',
@@ -396,6 +543,65 @@ export const articles: BlogArticle[] = [
     ],
   },
 ]
+
+/**
+ * Un dossier regroupe plusieurs écrits autour d'un même sujet.
+ * La page /blog n'affiche que les dossiers repliés ; le contenu se déplie au clic.
+ */
+export interface BlogCollection {
+  slug: string
+  /** œillet mono affiché au-dessus du titre */
+  eyebrow: string
+  title: string
+  /** décrit ce que contient le dossier, lu avant de l'ouvrir */
+  description: string
+  /** période ou cadre, affiché en mono sous la description */
+  meta: string
+  /** page de contexte mise en tête du dossier, hors chronologie */
+  companion?: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'>
+  articles: BlogArticle[]
+  /** affiché à la place de la liste tant que le dossier est vide */
+  emptyNote?: string
+}
+
+export const collections: BlogCollection[] = [
+  {
+    slug: 'stage-2026',
+    eyebrow: 'Dossier 01',
+    title: 'Stage 2026 - Infrastructure & réseau',
+    description:
+      'Le déroulé complet du stage de fin de Bachelor 2 chez un indépendant : administration de son infrastructure, conteneurisation, intégration continue, difficultés rencontrées et bilan. Contient la présentation de la structure d\'accueil et six articles techniques.',
+    meta: 'Mai - juillet 2026',
+    companion: companyPage,
+    articles,
+  },
+  {
+    slug: 'agence-immobiliere',
+    eyebrow: 'Dossier 02',
+    title: 'Ymmo - Plateforme immobilière',
+    description:
+      'Retour technique sur Ymmo, plateforme immobilière construite en microservices : backend C# ASP.NET Core, service d\'analyse Python et interface React. Architecture retenue, authentification à quatre niveaux de rôles, prédiction de prix et déploiement conteneurisé.',
+    meta: 'Projet académique - 2026',
+    articles: [],
+    emptyNote: 'Articles en cours de rédaction.',
+  },
+]
+
+/** nombre d'entrées lisibles dans un dossier, page de contexte comprise */
+export function collectionSize(c: BlogCollection): number {
+  return c.articles.length + (c.companion ? 1 : 0)
+}
+
+/**
+ * Ordre de lecture du blog : du plus ancien au plus récent.
+ * Un blog classique se lit à l'envers (dernier billet en tête) ; ici le dossier
+ * raconte un stage, donc il se lit dans l'ordre où il s'est déroulé.
+ * Source unique de vérité : la liste et la navigation d'article s'en servent
+ * toutes les deux, elles ne peuvent donc pas diverger.
+ */
+export function chronological(list: BlogArticle[]): BlogArticle[] {
+  return [...list].sort((a, b) => (a.date < b.date ? -1 : 1))
+}
 
 export function getArticle(slug: string): BlogArticle | undefined {
   return articles.find(a => a.slug === slug)

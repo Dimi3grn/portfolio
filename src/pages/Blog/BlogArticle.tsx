@@ -6,6 +6,7 @@ import BlueprintBackground from '../../components/BlueprintBackground/BlueprintB
 import NotFound from '../NotFound/NotFound'
 import {
   articles,
+  chronological,
   companyPage,
   getArticle,
   type ArticleSection,
@@ -68,11 +69,17 @@ export default function BlogArticle() {
 
   if (!content) return <NotFound />
 
-  // article suivant (chronologiquement plus récent en tête de liste)
-  const sorted = [...articles].sort((a, b) => (a.date < b.date ? 1 : -1))
+  // Chaîne de lecture complète : contexte → premier article → … → bilan.
+  // La page de contexte ouvre la série, elle n'a donc pas de précédent.
+  const sorted = chronological(articles)
   const idx = article ? sorted.findIndex(a => a.slug === article.slug) : -1
-  const next = idx > 0 ? sorted[idx - 1] : null
-  const prev = idx >= 0 && idx < sorted.length - 1 ? sorted[idx + 1] : null
+  const step: { slug: string; title: string } | null = null
+  const prev = isCompany ? step : idx > 0 ? sorted[idx - 1] : companyPage
+  const next = isCompany
+    ? (sorted[0] ?? step)
+    : idx >= 0 && idx < sorted.length - 1
+      ? sorted[idx + 1]
+      : step
 
   return (
     <div className="page">

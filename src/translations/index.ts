@@ -83,6 +83,9 @@ export interface TrSchema {
     fr_note: string
     company_eyebrow: string
     read_more: string
+    entries_singular: string
+    entries_plural: string
+    entries_none: string
     back_to_list: string
     reading_time_suffix: string
   }
@@ -241,10 +244,13 @@ export const t: Record<Lang, TrSchema> = {
     },
     blog: {
       title: 'Blog',
-      intro: 'Notes techniques et retours d\'expérience de mon stage 2026 : réseau, DevOps, veille.',
+      intro: 'Notes techniques et retours d\'expérience, regroupés par dossier. Ouvrez un dossier pour en voir le contenu.',
       fr_note: '',
       company_eyebrow: 'Contexte du stage',
       read_more: 'Lire l\'article',
+      entries_singular: 'entrée',
+      entries_plural: 'entrées',
+      entries_none: 'en préparation',
       back_to_list: 'Tous les articles',
       reading_time_suffix: 'de lecture',
     },
@@ -402,10 +408,13 @@ export const t: Record<Lang, TrSchema> = {
     },
     blog: {
       title: 'Blog',
-      intro: 'Technical notes and write-ups from my 2026 internship: networking, DevOps, tech watch.',
+      intro: 'Technical notes and write-ups, grouped into collections. Open one to see what it contains.',
       fr_note: 'Articles are written in French (school requirement).',
       company_eyebrow: 'Internship context',
       read_more: 'Read the article',
+      entries_singular: 'entry',
+      entries_plural: 'entries',
+      entries_none: 'in progress',
       back_to_list: 'All articles',
       reading_time_suffix: 'read',
     },
