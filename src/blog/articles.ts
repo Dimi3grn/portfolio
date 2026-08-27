@@ -1,14 +1,24 @@
 /**
- * Contenu du blog de stage (rendu Ynov B2 - noté selon la grille du
- * « Guide du Blog - Portfolio »). Les articles sont rédigés en français
- * (exigence du barème) ; le toggle EN affiche la même version.
+ * Contenu du blog de stage - rendu Ynov Bachelor 2, noté sur 20 selon la grille
+ * « Évaluation individuelle du rapport d'activité professionnelle ».
+ * Les articles sont rédigés en français (exigence du barème) ; le toggle EN
+ * affiche la même version.
  *
  * Ton éditorial : clair, concis, direct, professionnel - pas de narration.
  *
- * Les sections `todo` sont des blocs « à compléter » : des faits personnels
- * (entreprise réelle, anecdotes, ressenti) que seul l'auteur peut écrire.
- * Elles sont visibles en jaune tant qu'elles existent - le blog ne doit pas
- * être mis en production avant de les avoir remplacées.
+ * Chaque critère de la grille est adossé à un passage précis :
+ *   cadre général (nom, localisation, secteur, durée) ... companyPage, « La structure »
+ *   marché de l'entreprise ......................... companyPage, « La structure »
+ *   organisation du travail en équipe .............. companyPage, « Travailler à trois »
+ *   rattachement hiérarchique et responsabilités ... companyPage, « Travailler à trois »
+ *   outils techniques et méthodes .................. articles 2 à 4
+ *   curiosité, créativité, autonomie ............... bilan, section dédiée
+ *   difficulté révélant forces ET faiblesses ....... bilan, « Une difficulté, ce qu'elle dit de moi »
+ *   ressenti et progression ........................ bilan, « Mon ressenti »
+ *   impact sur le projet professionnel ............. bilan, « Ce que le stage a confirmé »
+ *
+ * Le type de section `todo` reste disponible pour rédiger : il affiche un bloc
+ * jaune « à compléter ». Il ne doit plus en rester au moment du rendu.
  */
 
 export type ArticleSection =
@@ -44,7 +54,11 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
     { type: 'h2', text: 'La structure' },
     {
       type: 'p',
-      text: 'Le stage s\'est déroulé chez Youkyi, la structure d\'Alexandre Agasseau, professionnel indépendant. Son activité repose sur une infrastructure auto-hébergée qu\'il administre lui-même, et sur laquelle ses clients font tourner leurs propres services.',
+      text: 'Le stage s\'est déroulé chez Youkyi, la structure d\'Alexandre Agasseau, professionnel indépendant basé dans le nord de la France. Secteur d\'activité : l\'hébergement et l\'infrastructure. Son activité repose sur une infrastructure auto-hébergée qu\'il administre lui-même, et sur laquelle ses clients font tourner leurs propres services.',
+    },
+    {
+      type: 'p',
+      text: 'Sa clientèle est composée de particuliers qui veulent héberger leurs propres solutions chez un prestataire plutôt que de les confier à un grand fournisseur. C\'est un positionnement de niche, entre deux offres qui dominent le marché : l\'hébergement mutualisé grand public, bon marché mais rigide, et les fournisseurs cloud, souples mais facturés à l\'usage et exigeants en compétences. Une structure indépendante occupe l\'espace intermédiaire, et y vend autant l\'accompagnement que la machine.',
     },
     {
       type: 'p',
@@ -79,6 +93,27 @@ export const companyPage: Omit<BlogArticle, 'date' | 'dateLabel' | 'readingTime'
       type: 'p',
       text: 'Le périmètre technique couvre les services auto-hébergés (DNS, DHCP, VPN, supervision) et le site web de l\'activité. Comme tout est utilisé en continu, chaque intervention impose une méthode : sauvegarde préalable, fenêtre d\'intervention annoncée, plan de retour arrière prêt avant de toucher quoi que ce soit.',
     },
+    { type: 'h2', text: 'Travailler à trois' },
+    {
+      type: 'p',
+      text: 'Nous étions trois stagiaires : Xerly, Romain et moi. Il n\'y a pas eu de répartition des tâches entre nous - nous avancions en parallèle sur les mêmes sujets, chacun sur son périmètre, en restant en appel quasiment en continu. Cette configuration a changé la vitesse d\'apprentissage : quand l\'un bloquait, il y avait souvent quelqu\'un qui avait rencontré le même mur une heure plus tôt.',
+    },
+    {
+      type: 'p',
+      text: 'L\'infrastructure de travail était partagée, et c\'est là que la collaboration est devenue une contrainte technique plutôt qu\'une question d\'organisation. Une machine commune, mais un compte par personne plutôt qu\'un compte unique - décision prise pour la traçabilité : savoir qui a fait quoi n\'est pas une formalité quand trois personnes interviennent au même endroit.',
+    },
+    {
+      type: 'p',
+      text: 'Concrètement, cela imposait des réflexes que je n\'avais jamais eus en travaillant seul : préfixer ses conteneurs à son nom, vérifier quels ports étaient déjà occupés avant d\'en publier un, et surtout identifier ce qui appartenait aux autres pour ne pas y toucher. Plusieurs fois, la bonne décision a été de contourner plutôt que de corriger quelque chose qui n\'était pas à moi.',
+    },
+    {
+      type: 'p',
+      text: 'Côté encadrement, la structure est simple : un seul interlocuteur, le tuteur, qui validait les approches avant qu\'on les lance et relisait ce qui avait été produit en fin de créneau. Aucune hiérarchie entre nous trois. Ma responsabilité portait sur mon propre périmètre - mes machines, mes services, mes interventions - avec l\'obligation de ne pas dégrader celui des autres.',
+    },
+    {
+      type: 'p',
+      text: 'C\'était ma première expérience d\'un environnement où mon travail peut interrompre celui de quelqu\'un d\'autre. En projet scolaire, une erreur n\'engage que soi. Ici, publier un port déjà pris ou redémarrer le mauvais conteneur arrêtait le travail de deux personnes.',
+    },
     { type: 'h2', text: 'Mes missions' },
     {
       type: 'ul',
@@ -104,7 +139,7 @@ export const articles: BlogArticle[] = [
     tags: ['Stage 2026', 'Intégration'],
     excerpt:
       'Prise en main de l\'environnement, cartographie des machines et des services, et méthode de travail mise en place pour être opérationnel rapidement.',
-    readingTime: '4 min',
+    readingTime: '3 min',
     sections: [
       {
         type: 'p',
@@ -165,7 +200,7 @@ export const articles: BlogArticle[] = [
     tags: ['Réseau', 'DNS', 'Supervision'],
     excerpt:
       'Administration de trois services critiques sur un environnement de production : opérations réalisées, précautions adoptées et apport de la supervision.',
-    readingTime: '6 min',
+    readingTime: '4 min',
     sections: [
       {
         type: 'p',
@@ -241,7 +276,7 @@ export const articles: BlogArticle[] = [
     tags: ['DevOps', 'Docker', 'CI/CD'],
     excerpt:
       'Conteneurisation avec Docker/Compose, puis la même chaîne CI/CD montée trois fois sur trois forges différentes : GitHub Actions, Gitea et GitLab.',
-    readingTime: '7 min',
+    readingTime: '6 min',
     sections: [
       {
         type: 'p',
@@ -335,7 +370,7 @@ export const articles: BlogArticle[] = [
     tags: ['Retour d\'expérience', 'Debug'],
     excerpt:
       'Trois blocages réels du stage - un certificat impossible à obtenir, une image qui ignore une convention, un message d\'erreur qui désigne le mauvais coupable - et ce que chacun a changé dans ma méthode.',
-    readingTime: '6 min',
+    readingTime: '4 min',
     sections: [
       {
         type: 'p',
@@ -413,7 +448,7 @@ export const articles: BlogArticle[] = [
     tags: ['Veille', 'Ansible', 'IaC'],
     excerpt:
       'État des lieux de l\'Infrastructure as Code à partir de mon initiation Ansible en stage : principe, écosystème, cas d\'usage et limites pour une petite structure.',
-    readingTime: '5 min',
+    readingTime: '3 min',
     sections: [
       {
         type: 'p',
@@ -458,7 +493,7 @@ export const articles: BlogArticle[] = [
     tags: ['Stage 2026', 'Bilan'],
     excerpt:
       'Bilan des trois mois de stage : compétences acquises formulées et vérifiables, points d\'amélioration identifiés, propositions pour la suite de la mission.',
-    readingTime: '6 min',
+    readingTime: '7 min',
     sections: [
       {
         type: 'p',
@@ -495,10 +530,40 @@ export const articles: BlogArticle[] = [
         type: 'p',
         text: 'C\'est aussi de là que vient le plus utile de ce stage. Chercher au mauvais endroit pendant deux heures apprend, mais seulement si on prend ensuite la peine de comprendre pourquoi on cherchait là. La méthode ne vient pas des problèmes résolus : elle vient des problèmes mal cherchés.',
       },
+      { type: 'h2', text: 'Une difficulté, ce qu\'elle dit de moi' },
+      {
+        type: 'p',
+        text: 'Si je devais n\'en retenir qu\'une, ce serait le blocage sur la clé d\'API racontée dans l\'article sur les difficultés. Elle est la plus instructive parce qu\'elle m\'a montré mes deux versants d\'un coup.',
+      },
+      {
+        type: 'p',
+        text: 'Mes faiblesses, d\'abord, parce qu\'elles sont les plus visibles. J\'ai fait confiance au message d\'erreur au lieu de le questionner : il disait « clé invalide », j\'ai cherché un problème de clé. J\'ai ensuite testé mes hypothèses dans le mauvais ordre - en commençant par les plus coûteuses à vérifier, la région du compte et les droits d\'accès, alors que la plus simple ne demandait qu\'une commande. Et j\'ai retapé une clé à la main plutôt que de la copier, ce qui a ajouté une fausse piste à un problème qui n\'en manquait pas.',
+      },
+      {
+        type: 'p',
+        text: 'Mes forces, ensuite. Je n\'ai pas contourné : la solution facile aurait été de régénérer une clé jusqu\'à ce que ça marche, sans jamais comprendre pourquoi. J\'ai procédé par élimination méthodique, j\'ai isolé chaque couche jusqu\'à prouver que la clé était bonne, et je suis remonté à la vraie cause - une ligne de configuration qui empêchait la valeur d\'arriver. J\'ai aussi documenté la démarche, ce qui l\'a rendue réutilisable.',
+      },
+      {
+        type: 'p',
+        text: 'Le déséquilibre est clair et je l\'assume : je suis meilleur à creuser qu\'à choisir par où commencer. Ma marge de progression est là - ordonner mes hypothèses de la moins chère à la plus chère avant de me lancer, au lieu de suivre la piste la plus évidente.',
+      },
       { type: 'h2', text: 'Ce que le stage a confirmé' },
       {
         type: 'p',
         text: 'La double dimension du stage - développement et infrastructure - correspond à l\'orientation que je vise. Elle a confirmé mon positionnement Fullstack & DevOps, répercuté depuis sur mon CV et sur ce portfolio.',
+      },
+      { type: 'h2', text: 'Curiosité, créativité, autonomie' },
+      {
+        type: 'p',
+        text: 'Curiosité : quand l\'application refusait de démarrer sans dire pourquoi, je suis allé ouvrir le script d\'installation à l\'intérieur de l\'image officielle. La documentation ne mentionnait pas la variable manquante ; le code, lui, l\'exigeait noir sur blanc. Lire la source d\'un outil plutôt qu\'attendre qu\'il s\'explique est le réflexe que je garde de plus utile.',
+      },
+      {
+        type: 'p',
+        text: 'Créativité : cette même image ne savait pas lire un mot de passe depuis un fichier, alors que c\'est la bonne pratique. Les deux options évidentes étaient mauvaises - laisser le secret en clair, ou renoncer à l\'image. J\'ai construit une image dérivée dotée d\'un point d\'entrée qui comble le manque avant de rendre la main à l\'original. La contrainte était contournée sans rien dégrader.',
+      },
+      {
+        type: 'p',
+        text: 'Autonomie : sur les trois forges, seule la première a été accompagnée. Les deux suivantes, je les ai montées seul en transposant ce que j\'avais compris - y compris lorsque l\'outil rangeait les mêmes concepts à des endroits différents, ce qui obligeait à comprendre le principe plutôt qu\'à recopier une recette.',
       },
       { type: 'h2', text: 'Les compétences acquises' },
       {
