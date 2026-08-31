@@ -29,14 +29,14 @@ const staticPages: PageMetaEntry[] = [
     path: '/',
     title: HOME_TITLE,
     description:
-      'Développeur Fullstack & DevOps, étudiant en Bachelor 3 Informatique à Ynov Aix. Architectures performantes en Go, Java et C#, et pratiques DevOps. En recherche d\'alternance dès septembre 2026.',
+      'Développeur Fullstack & DevOps, basé à Paris, étudiant en Bachelor 3 Informatique. Architectures performantes en Go, Java et C#, et pratiques DevOps. En recherche d\'alternance dès septembre 2026.',
     type: 'website',
   },
   {
     path: '/about',
     title: `À propos — ${SITE_NAME}`,
     description:
-      'Mon parcours, mon profil et mon CV. Étudiant en Bachelor 3 Informatique à Ynov Aix, orienté développement backend et pratiques DevOps.',
+      'Mon parcours, mon profil et mon CV. Étudiant en Bachelor 3 Informatique, basé à Paris, orienté développement backend et pratiques DevOps.',
     type: 'website',
   },
   {
