@@ -22,21 +22,21 @@ export interface PageMetaEntry {
   type: 'website' | 'article'
 }
 
-const HOME_TITLE = 'Dimitri Gourrin — Développeur Fullstack & DevOps'
+const HOME_TITLE = 'Dimitri Gourrin — Développeur Full Stack orienté DevOps'
 
 const staticPages: PageMetaEntry[] = [
   {
     path: '/',
     title: HOME_TITLE,
     description:
-      'Développeur Fullstack & DevOps, basé à Paris, étudiant en Bachelor 3 Informatique. Architectures performantes en Go, Java et C#, et pratiques DevOps. En recherche d\'alternance dès septembre 2026.',
+      'Développeur full stack orienté DevOps, basé à Paris, en Bachelor 3 à Ynov Nanterre. Go, C#, TypeScript, Docker et CI/CD. Disponible immédiatement pour une alternance de 12 mois.',
     type: 'website',
   },
   {
     path: '/about',
     title: `À propos — ${SITE_NAME}`,
     description:
-      'Mon parcours, mon profil et mon CV. Étudiant en Bachelor 3 Informatique, basé à Paris, orienté développement backend et pratiques DevOps.',
+      'Mon parcours, mon profil et mon CV. Étudiant en Bachelor 3 à Ynov Nanterre, basé à Paris, orienté développement full stack et DevOps.',
     type: 'website',
   },
   {
@@ -57,7 +57,7 @@ const staticPages: PageMetaEntry[] = [
     path: '/stack',
     title: `Stack technique — ${SITE_NAME}`,
     description:
-      'Les technologies que j\'utilise : Go, Java, C#, React et TypeScript côté développement ; Docker, CI/CD, Linux et réseau côté infrastructure.',
+      'Les technologies que j\'utilise : Go, C#, Python, React et TypeScript côté développement ; Docker, CI/CD, Linux et réseau côté infrastructure.',
     type: 'website',
   },
   {
@@ -71,7 +71,7 @@ const staticPages: PageMetaEntry[] = [
     path: '/contact',
     title: `Contact — ${SITE_NAME}`,
     description:
-      'Me contacter pour une alternance dès septembre 2026, en développement backend ou en DevOps.',
+      'Me contacter pour une alternance de 12 mois, disponible immédiatement, en développement full stack ou en DevOps.',
     type: 'website',
   },
 ]

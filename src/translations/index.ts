@@ -109,18 +109,19 @@ export const t: Record<Lang, TrSchema> = {
       contact: 'Contact',
     },
     hero: {
-      tag: 'Étudiant · Développeur Fullstack & DevOps',
+      // espace insécable : sur mobile, « orienté DevOps » passe à la ligne d'un bloc
+      tag: 'Développeur Full Stack orienté DevOps',
       name: 'Dimitri Gourrin',
-      tagline: 'Architectures performantes (Go, Java, C#) et pratiques DevOps : je conçois des applications complètes - du backend à l\'interface - avec rigueur et autonomie.',
-      alternance: 'En recherche d\'alternance · Paris · dès septembre 2026 · Rythme : 2 sem. entreprise / 1 sem. cours',
+      tagline: 'Je développe des applications web full stack en Go, C# et TypeScript, et je les mets en production moi-même : Docker, CI/CD, serveurs Linux.',
+      alternance: 'Alternance 12 mois · Paris · disponible immédiatement · Rythme : 2 sem. entreprise / 1 sem. école',
       cta_projects: 'Voir mes projets',
       cta_cv: 'Télécharger mon CV',
       cta_contact: 'Me contacter',
     },
     about: {
       title: 'À propos',
-      body: 'Développeur Fullstack basé à Paris, en Bachelor 3 Informatique, orienté architectures performantes (Go, Java, C#) et pratiques DevOps. Je construis des applications complètes - de la base de données à l\'interface - avec une attention particulière aux fondations solides et au code maintenable. L\'infrastructure et les réseaux font pleinement partie de ma pratique : conteneurisation, CI/CD, administration système - une dimension que je considère nécessaire pour concevoir des systèmes qui fonctionnent vraiment en production. Trilingue, je combine rigueur technique et autonomie pour concevoir des solutions scalables. Je recherche activement une alternance dès septembre 2026 pour continuer à progresser dans un environnement professionnel.',
-      facts: ['Basé à Paris', 'Mobilité : Paris et Île-de-France', 'Anglais C1 · Russe natif · Italien (notions)'],
+      body: 'Développeur full stack orienté DevOps, basé à Paris, en Bachelor 3 à Ynov Nanterre. Je développe en Go, C# et TypeScript. Je construis des applications complètes - de la base de données à l\'interface - avec une attention particulière aux fondations solides et au code maintenable. L\'infrastructure et les réseaux font pleinement partie de ma pratique : conteneurisation, CI/CD, administration système - une dimension que je considère nécessaire pour concevoir des systèmes qui fonctionnent vraiment en production. Les backends de trois de mes projets tournent sur une VM Oracle Cloud que j\'administre, derrière un reverse proxy Caddy. Je recherche une alternance de 12 mois, disponible immédiatement.',
+      facts: ['Paris · Ynov Nanterre', 'Mobilité : Paris et Île-de-France', 'Anglais C1 · Russe natif · Italien (notions)'],
     },
     experience: {
       title: 'Parcours',
@@ -130,9 +131,9 @@ export const t: Record<Lang, TrSchema> = {
       formation: [
         {
           role: 'Bachelor Informatique - 3e année',
-          company: 'Ynov Campus · Aix-en-Provence',
-          period: '2024 - Présent',
-          description: 'Spécialisation Développement Logiciel & Web.',
+          company: 'Ynov Campus · Aix-en-Provence puis Nanterre',
+          period: '2024 - 2027',
+          description: 'B1 et B2 à Aix-en-Provence, B3 à Nanterre. Spécialisation développement logiciel & web.',
           tags: [],
         },
         {
@@ -158,16 +159,16 @@ export const t: Record<Lang, TrSchema> = {
       ],
       items: [
         {
-          role: 'Stage - Développement & Infrastructure',
-          company: 'Indépendant · Infrastructure & Réseau',
+          role: 'Stage - Administration systèmes & DevOps',
+          company: 'Youkyi · Hébergement et infogérance · Télétravail',
           period: 'Mai - Juil. 2026',
           description: '',
           bullets: [
-            'Administration réseau & infra : cartographie, gestion DNS/DHCP/VPN, supervision et monitoring.',
-            'Développement web : nouvelles fonctionnalités, audit qualité du code, refactoring et optimisation UI.',
-            'DevOps : conteneurisation Docker/Compose, scripts Bash/Python, initiation Ansible, pipeline CI/CD (GitHub Actions).',
+            'Provisionnement de VM sous Proxmox (ISO, cloud-init), cartographie de l\'infrastructure, gestion DNS, DHCP et VPN, supervision sous Grafana.',
+            'Conteneurisation Docker Compose, reverse proxy Traefik, certificats Let\'s Encrypt automatisés, durcissement des conteneurs (non-root, secrets, scan Trivy).',
+            'Même chaîne CI/CD montée sur trois forges (GitHub Actions, Gitea, GitLab), runners auto-hébergés, images versionnées par commit.',
           ],
-          tags: ['Docker', 'Ansible', 'GitHub Actions', 'Python', 'Linux'],
+          tags: ['Proxmox', 'Docker', 'Traefik', 'GitLab CI', 'Trivy', 'Grafana'],
         },
         {
           role: 'Équipier Polyvalent',
@@ -187,7 +188,7 @@ export const t: Record<Lang, TrSchema> = {
           tags: ['C# / ASP.NET Core', 'React', 'Python / FastAPI', 'PostgreSQL', 'Docker'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
-          status: 'Projet académique · 2026',
+          status: 'Projet de groupe · code réalisé intégralement · 2026',
           preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
@@ -273,18 +274,18 @@ export const t: Record<Lang, TrSchema> = {
       contact: 'Contact',
     },
     hero: {
-      tag: 'Student · Fullstack & DevOps Developer',
+      tag: 'Full Stack Developer, DevOps-oriented',
       name: 'Dimitri Gourrin',
-      tagline: 'Performant architectures (Go, Java, C#) and DevOps practices: I build complete applications - from backend to interface - with rigor and autonomy.',
-      alternance: 'Looking for a work-study position · Paris · from September 2026 · Rhythm: 2 weeks company / 1 week school',
+      tagline: 'I build full stack web applications in Go, C# and TypeScript, and ship them to production myself: Docker, CI/CD, Linux servers.',
+      alternance: '12-month work-study · Paris · available now · Rhythm: 2 weeks company / 1 week school',
       cta_projects: 'See my work',
       cta_cv: 'Download CV',
       cta_contact: 'Get in touch',
     },
     about: {
       title: 'About',
-      body: 'Fullstack developer based in Paris, in the 3rd year of the Computer Science Bachelor, focused on performant architectures (Go, Java, C#) and DevOps practices. I build complete applications - from database to user interface - with close attention to solid foundations and maintainable code. Infrastructure and networking are a full part of my practice: containerization, CI/CD, system administration - a dimension I consider necessary to build systems that actually work in production. Trilingual, I combine technical rigor and autonomy to design scalable solutions. I\'m actively looking for a work-study position starting September 2026 to keep growing in a professional environment.',
-      facts: ['Based in Paris', 'Mobility: Paris and Île-de-France', 'English C1 · Russian native · Italian (basics)'],
+      body: 'Full stack developer, DevOps-oriented, based in Paris, in the 3rd year of the Computer Science Bachelor at Ynov Nanterre. I build in Go, C# and TypeScript. I build complete applications - from database to user interface - with close attention to solid foundations and maintainable code. Infrastructure and networking are a full part of my practice: containerization, CI/CD, system administration - a dimension I consider necessary to build systems that actually work in production. The backends of three of my projects run on an Oracle Cloud VM I administer, behind a Caddy reverse proxy. I\'m looking for a 12-month work-study position, available now.',
+      facts: ['Paris · Ynov Nanterre', 'Mobility: Paris and Île-de-France', 'English C1 · Russian native · Italian (basics)'],
     },
     experience: {
       title: 'Background',
@@ -294,9 +295,9 @@ export const t: Record<Lang, TrSchema> = {
       formation: [
         {
           role: 'Bachelor of Computer Science - 3rd year',
-          company: 'Ynov Campus · Aix-en-Provence',
-          period: '2024 - Present',
-          description: 'Specialization in Software & Web Development.',
+          company: 'Ynov Campus · Aix-en-Provence then Nanterre',
+          period: '2024 - 2027',
+          description: 'Years 1 and 2 in Aix-en-Provence, year 3 in Nanterre. Specialization in software & web development.',
           tags: [],
         },
         {
@@ -322,16 +323,16 @@ export const t: Record<Lang, TrSchema> = {
       ],
       items: [
         {
-          role: 'Internship - Development & Infrastructure',
-          company: 'Freelance · Infrastructure & Network',
+          role: 'Internship - Systems Administration & DevOps',
+          company: 'Youkyi · Hosting and managed services · Remote',
           period: 'May - Jul. 2026',
           description: '',
           bullets: [
-            'Network & infrastructure administration: mapping, DNS/DHCP/VPN management, supervision and monitoring.',
-            'Web development: new features, code quality audits, refactoring and UI optimization.',
-            'DevOps: Docker/Compose containerization, Bash/Python scripting, introduction to Ansible, CI/CD pipeline (GitHub Actions).',
+            'Provisioned VMs on Proxmox (ISO, cloud-init), mapped the infrastructure, managed DNS, DHCP and VPN, monitoring with Grafana.',
+            'Containerization with Docker Compose, Traefik reverse proxy, automated Let\'s Encrypt certificates, container hardening (non-root, secrets, Trivy scans).',
+            'Built the same CI/CD pipeline on three forges (GitHub Actions, Gitea, GitLab), self-hosted runners, images versioned by commit.',
           ],
-          tags: ['Docker', 'Ansible', 'GitHub Actions', 'Python', 'Linux'],
+          tags: ['Proxmox', 'Docker', 'Traefik', 'GitLab CI', 'Trivy', 'Grafana'],
         },
         {
           role: 'Team Member',
@@ -351,7 +352,7 @@ export const t: Record<Lang, TrSchema> = {
           tags: ['C# / ASP.NET Core', 'React', 'Python / FastAPI', 'PostgreSQL', 'Docker'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
-          status: 'Academic project · 2026',
+          status: 'Group project · built end to end by me · 2026',
           preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
