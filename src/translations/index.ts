@@ -188,7 +188,7 @@ export const t: Record<Lang, TrSchema> = {
           tags: ['C# / ASP.NET Core', 'React', 'Python / FastAPI', 'PostgreSQL', 'Docker'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
-          status: 'Projet de groupe · code réalisé intégralement · 2026',
+          status: 'Projet académique · 2026',
           preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
@@ -352,7 +352,7 @@ export const t: Record<Lang, TrSchema> = {
           tags: ['C# / ASP.NET Core', 'React', 'Python / FastAPI', 'PostgreSQL', 'Docker'],
           github: 'https://github.com/Dimi3grn/Ymmo',
           live: 'https://ymmo.dimitrigourrin.dev',
-          status: 'Group project · built end to end by me · 2026',
+          status: 'Academic project · 2026',
           preview: projectPreviewMshot('https://ymmo.dimitrigourrin.dev'),
         },
         {
